@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML 테이블 요소</title>
+  <style>
+    td {
+      background-color: aquamarine;
+    }
+    thead {
+      background-color: antiquewhite;
+    }
+    tbody {
+      color: blueviolet;
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+    <table> : 화면에 테이블 형태의 출력을 위한 요소
+    테이블을 표기하고자 할 때 <table></table> 태그로 감싸서 만듬
+    <tr> : 테이블의 한 행을 나타내는 요소, <td>, <th>로 구성됨
+    <td> : 테이블의 데이터 셀 하나를 나타내는 요소
+    <th> : 테이블의 헤더 셀 하나를 나타내는 요소
+  -->
+  <table>
+    <tr>
+      <th>시간</th>
+      <th>월</th>
+      <th>화</th>
+      <th>수</th>
+      <th>목</th>
+      <th>금</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>국어</td>
+      <td>체육</td>
+      <td>영어</td>
+      <td>사회</td>
+      <td>수학</td>
+    </tr>
+    <!-- 테이블 작업시 td, th의 갯수 주의 -->
+    <tr>
+      <td>8</td>
+      <td></td>
+      <td>사회</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td></td>
+      <td rowspan="2"></td>
+      <td></td>
+      <td colspan="2">자습</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td></td>
+      <td ></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <!-- 
+    HTML 테이블에서 각 영역에 대한 그룹화를 표현하는 <thead>, <tbody>, <tfoot> 요소가 존재
+  -->
+  <table>
+    <thead>
+      <tr>
+        <th>순번</th>
+        <th>금액</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>$100</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>$120</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>총합</td>
+        <td>$220</td>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+</html>
