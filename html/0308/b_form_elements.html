@@ -6,6 +6,33 @@
   <title>HTML 폼 요소</title>
 </head>
 <body>
-  
+  <!--  
+    <form> 요소 : 사용자로부터 입력받은 데이터를 처리하는 요소
+    
+    action 속성 : 해당 양식을 처리할 url을 지정
+    
+    method 속성 : 해당 양식을 처리할 방법을 지정(http 처리에 대한 method 지정), get/post
+      get : 데이터를 전송할 때 URL에 붙여서 전송하는 방법(form 쿼리문자열로 전송)
+            예) http://cocalhost:5500/html/form_elements.html?키1=값1&키2=값2
+            URL 뒤에 '?'를 통해서 쿼리문자열의 시작을 알리고 key=value형태로 데이터를 전송
+            , 만약 2개 이상이라면 각 key=value 사이를 '&'로 구분
+            전송 데이터가 URL에 표시되기 때문에 보안상 문제가 발생 할 수 있음
+            전송할 데이터의 길이가 제한되어 있음 (최대 255자)
+            서버로부터 데이터를 받기위한 용도로 사용되는 메서드
+            응답 속도가 상대적으로 빠름
+
+      post : request body에 데이터를 담아서 전송
+            전송 데이터가 숨겨져서 전송되기 때문에 get에 비해 보안상 안전
+            전송할 데이터의 길이 제한이 없음
+            서버에 데이터를 작성하기 위한 용도로 사용되는 메서드
+            응답 속도가 상대적으로 느림
+  -->
+  <!-- <form action="https://naver.com"> -->
+  <form action="./a_input_button_elements.html" method="post">
+    <!-- input의 name 속성 : form에서 작업을 처리할 때, 해당 값의 이름을 지정하는 속성 -->
+    이름 : <input type="text" name="name" value="홍길동" />
+    비밀번호 : <input type="password" name="password" />
+    <button>전송</button>
+  </form>
 </body>
 </html>
