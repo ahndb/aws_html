@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 박스 모델</title>
+    <style>
+
+        * { font-size: 24px; }
+
+        /* 
+            박스모델 : 
+                - 
+                - 
+            
+                - 
+                - 
+                - 
+                - 
+
+                - 
+        */
+
+        /*
+            width / height :
+                - 
+                - 
+                - 
+                - 
+        */
+
+        /*
+            width와 height가 실제 전체 박스 크기를 지정하지 않음을 주의
+                - 전체 너비 : width + left padding + right padding + left border + right border + left margin + right margin
+                - 전체 높이 : height + top padding + bottom padding + top border + bottom border + top margin + bottom margin
+        */
+
+        /*
+            max / min - width / height : 
+        */
+
+
+
+        /*
+            margin / padding :
+                - 
+        */
+        
+
+        /*
+            margin[padding] : 상 우 하 좌;
+            margin[padding] : 상 우좌 하;
+            margin[padding] : 상하 우좌;
+            margin[padding] : 상우하좌;
+        */
+
+
+
+        /*
+            border : 
+                - 
+        */
+
+        /*
+            border-style : 
+                - 
+                - 
+        */
+        
+
+        /*
+            border-style : 상 우 하 좌;
+            border-style : 상 우좌 하;
+            border-style : 상하 우좌;
+            border-style : 상우하좌;
+        */
+
+
+        /*
+            border-width : 
+        */
+        
+
+        /*
+            border-width : 상 우 하 좌;
+            border-width : 상 우좌 하;
+            border-width : 상하 우좌;
+            border-width : 상우하좌;
+        */
+
+
+        /*
+            border-color : 
+        */
+        
+
+        /*
+            border-color : 상 우 하 좌;
+            border-color : 상 우좌 하;
+            border-color : 상하 우좌;
+            border-color : 상우하좌;
+        */
+
+
+        /*
+            border-radius : 
+        */
+        
+
+        /*
+            border-radius : tl tr br bl;
+            border-radius : tl trbl br;
+            border-radius : tlbr trbl;
+            border-radius : all;
+        */
+
+        /* 타원형 모서리 적용 방법 */
+       
+
+        /*
+            border-radius : tlx trx brx blx / tly try bry bly;
+        */
+
+        /*
+            border : 
+                - 
+        */
+        
+
+        /* 
+            box-sizing : 
+                - 
+                - 
+        */
+       
+
+    </style>
+</head>
+<body>
+
+    <div class="width-height-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+    <div class="width-height-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+    <hr />
+
+    <div class="margin-padding-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+    <div class="margin-padding-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+    <hr />
+
+    <div class="border-style-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+    <br>
+    <div class="border-style-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+    <hr />
+
+    <div class="border-width-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+    <br>
+    <div class="border-width-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+    <hr />
+
+    <div class="border-color-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+    <br>
+    <div class="border-color-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+    <hr />
+
+    <div class="border-radius-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+    <br>
+    <div class="border-radius-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+    <hr />
+
+    <div class="border-radius-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+    <hr />
+
+    <div class="border">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+    <hr />
+
+    <div class="content-box">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+    <br>
+    <div class="border-box">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+</body>
+</html>
