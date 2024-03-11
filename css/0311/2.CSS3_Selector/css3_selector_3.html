@@ -25,40 +25,69 @@
       color: rgba(0, 255, 0, 0.7);
     }
 
-    /* ":hover" :  */
-
-    /* ":active" :  */
-
-    /* ":focus" :  */
-
+    /* ":hover" : 요소에 마우스를 올렸을 때 */
+    .action:hover {
+      background-color: rgba(255, 0, 0, 0.7);
+    }
+    /* ":active" : 요소가 클릭이 된 상태일 때 */
+    .action:active {
+      background-color: rgba(0, 0, 255, 0.7);
+    }
+    /* ":focus" : 요소에 커서가 맞춰져 있을 때 */
+    .action:focus {
+      background-color: rgba(0, 255, 0, 0.7);
+    }
 
     /* UI 요소 선택자 */
-    /* ":checked" :  */
-
-    /* ":enabled" :  */
-
-    /* ":disabled" :  */
-
+    /* ":checked" : 요소가 체크된 상태일 때 */
+    .ui:checked + .label {
+      color: rgba(255, 0, 0, 0.7);
+    }
+    /* ":enabled" : 요소가 사용 가능한 상태일 때 */
+    .ui:enabled + .label {
+      font-weight: 700;
+    }
+    /* ":disabled" : 요소가 사용 불가능한 상태일 때 */
+    .ui:disabled + .label {
+      text-decoration: line-through;
+    }
 
     /* 구조 선택자 */
-    /* ":first-child" :  */
-
-    /* ":last-child" :  */
-
+    /* ":first-child" : 선택자에 해당하는 모든 요소 중 첫번째 형제 */
+    .structural:first-child {
+      background-color: rgba(255, 0, 0, 0.7);
+    }
+    /* ":last-child" : 선택자에 해당하는 모든 요소 중 마지막 형제 요소를 선택 */
+    .structural:last-child {
+      background-color: rgba(0, 0, 255, 0.7);
+    }
 
 
     /* 가상 요소 선택자 */
-    /*   */
+    /* 요소의 특정 부분에 스타일을 적용할 때 사용 */
 
-    /* "::first-letter" :  */
-
-    /* "::first-line" :  */
-
-    /* "::after" :  */
-
-    /* "::before" :  */
-
-    /* "::selection" :  */
+    /* "::first-letter" : 컨텐츠의 첫 글자를 선택 */
+    .pseudo1::first-letter {
+      font-size: 48px;
+    }
+    /* "::first-line" : 컨텐츠의 첫 줄을 선택 */
+    .pseudo1::first-line {
+      color: rgba(255, 0, 0, 0.7);
+    }
+    /* "::after" : 컨텐츠의 뒤에 있는 위치를 선택 */
+    .pseudo2::after {
+      content: 'after 가상요소';
+      color: rgba(255, 0, 0, 0.7);
+    }
+    /* "::before" : 컨텐츠의 앞에 있는 위치를 선택 */
+    .pseudo2::before {
+      content: 'before 가상요소';
+      color: rgba(0, 0, 255, 0.7);
+    }
+    /* "::selection" : 드래그한 컨텐츠를 선택(여러 브라우저에서 지원을 하지않음) */
+    .pseudo2::selection {
+      background-color: rgba(255, 255, 0, 0.7);
+    }
   </style>
 </head>
 
@@ -74,9 +103,12 @@
 
   <hr />
 
-  <input class="ui" type="checkbox" checked> <span class="label">Lorem ipsum</span><br>
-  <input class="ui" type="checkbox"> <span class="label">Lorem ipsum</span><br>
-  <input class="ui" type="checkbox" disabled><span class="label">Lorem ipsum</span>
+  <input class="ui" type="checkbox" checked /> 
+  <span class="label">Lorem ipsum</span><br>
+  <input class="ui" type="checkbox" /> 
+  <span class="label">Lorem ipsum</span><br>
+  <input class="ui" type="checkbox" disabled />
+  <span class="label">Lorem ipsum</span>
 
   <hr />
 
