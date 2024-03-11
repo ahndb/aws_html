@@ -32,7 +32,15 @@
     <!-- input의 name 속성 : form에서 작업을 처리할 때, 해당 값의 이름을 지정하는 속성 -->
     이름 : <input type="text" name="name" value="홍길동" />
     비밀번호 : <input type="password" name="password" />
-    <button>전송</button>
+    <!--  
+      버튼의 타입
+      submit: form 요소의 데이터를 제출 (form 내부의 button의 default 타입)
+      reset: form 요소의 입력창을 모두 초기화
+      button: 아무런 동작을 하지 않음
+    -->
+    <button type="submit">전송</button>
+    <button type="reset">초기화</button>
+    <button type="button">기본 버튼</button>
   </form>
 </body>
 </html>

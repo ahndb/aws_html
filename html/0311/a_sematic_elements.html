@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML 시멘틱 요소</title>
+</head>
+<body>
+  <!--  
+    시멘틱 요소: 웹 페이지의 구조를 명명해둔 요소
+      - 문서의 가독성 향상, 검색엔진 최적화의 목적
+      - 각각의 요소마다 특별한 기능은 없음
+  -->
+
+  <!-- 
+    header 요소 : 웹 페이지의 헤더를 나타냄.
+                  로고, 제목 그리고 네비게이션 등이 헤더에 포함 됨
+  -->
+  <header>
+    <h1>헤더 제목</h1>
+    <!--
+      nav 요소: 웹 페이지의 네비게이션을 나타냄. 
+                일반적으로 리스트 형태의 요속가 포함됨 
+    -->
+    <nav>
+      <ul>
+        <li><a href="#">메일</a></li>
+        <li><a href="#">카페</a></li>
+        <li><a href="#">블로그</a></li>
+        <li><a href="#">쇼핑</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- main 요소 : 웹 페이지의 주 컨텐츠를 나타냄 -->
+  <main>
+    <!-- section 요소 : 독립적인 섹션을 나타냄 -->
+    <section>
+      <h3>쇼핑</h3>
+      <div>쇼핑 컨텐츠</div>
+    </section>
+
+    <section>
+      <h3>뉴스</h3>
+      <div>뉴스 컨텐츠</div>
+    </section>
+
+  </main>
+  
+  <!-- acticle 요소 : 독립적 컨텐츠를 나타냄. 특정 컨텐츠의 제목, 내용 등을 포함 -->
+  <article>
+    <h1>기사 제목</h1>
+    <p>기사 내용</p>
+  </article>
+  <!--  
+    footer 요소 : 웹 페이지의 바닥을 나타냄.
+                저작권 정보, 네비게이션, 참고 문헌 등 포함 됨
+  -->
+  <footer>
+    <!-- 
+      &lt : <
+      &gt : >  
+    -->
+    <p>&lt;Copyright &copy; 2024&gt;</p>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
