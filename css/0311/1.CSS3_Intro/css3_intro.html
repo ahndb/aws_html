@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS 란?</title>
+  <!-- 
+  CSS (Cascading Style Sheet) :
+      - HTMl 이나 XML과 같은 구조화된 문서를 어떻게 렌더링 할 것인지 선언하는 것
+      - 의 각 요소의 스타일을 선언하여 화면에 어떻게 렌더링 할지 브라우저에게 설명하는 언어
+      - HTML과 CSS는 서로 다른 언어이지만, CSS는 HTML없이 단독으로 사용할 수 없음
+
+  CSS 구성요소 : 선택자 { 속성:값; 속성:값;}
+      - 선택자 (Selector) : 스타일을 적용하고자하는 HTML의 특정 요소를 지정할 때 사용하는 것
+      - 속성 (Property) : 선택자로 HTML의 요소를 선택하고 해당 요소에 어떤 스타일을 적용할지 지정하는 것
+      - 값 (Value) : 속성에 적용할 값. 키워드, 크기 단위, 색상 단위로 지정
+
+  HTML에 CSS 적용 :
+      - Link style : HTML 외부에 있는 CSS 파일을 HTML에 로드해서 사용하는 방식
+      - Embedding style : HTML 내부 중 head 요소 안에 style 요소로 css를 작성하는 방식
+      - Inline style : HTML 요소의 시작 태그에 style 속성으로 css를 작성하는 방식
+      - 적용 우선순위 : Inline > Embedding > Link 
+  -->
+
+  <!-- Link style -->
+    <link rel="stylesheet" href="./style.css" />
+  <!-- Embedding style -->
+    <style>
+      h1 {
+        color: orange; 
+      }
+      h2 {
+        color: blue;
+      }
+    </style>
+  <!--
+  Reset CSS : 
+    - 모든 웹 브라우저는 각각 기본 스타일을 가지고 있어 CSS없이 웹 브라우저에 따라 스타일을 각각 다르게 표현 됨
+    - Reset CSS를 사용해 HTML 기본 스타일 제거하고 각 브라우저 마다 동일한 스타일로 통일 할 수 있도록 해줌
+  -->
+  <link rel="stylesheet" href="./reset.css">
+</head>
+
+<body>
+  <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua.</h1>
+  <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua.</h2>
+  <!-- Inline style -->
+  <h3 style="color: green;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua.</h3>
+</body>
+
+</html>

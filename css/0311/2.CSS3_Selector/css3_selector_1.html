@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS 선택자 1</title>
+  <style>
+    /* 
+    선택자 : 
+      - html의 요소를 특정하기 위해 사용하는 것
+      - 여러개의 선택자를 연속해서 적용하려면 ','로 구분하여 나열 
+    */
+
+    /* 
+    전체 선택자 : '*'를 사용해 HTML 내 모든 요소를 선택
+     */
+    * {
+      font-size: 24px;
+    }
+
+    /* 
+    태그 선택자 : '태그이름'을 사용해 특정 태그르를 가지는 요소 선택
+    */
+    h2 {
+      color: rgba(0, 0, 0, 0.5);
+    }
+
+    /* 
+    id 선택자 : '#아이디명' 을 사용해 id 속성 값과 일치하는 요소를 선택
+    */
+
+    /* 
+    class 선택자 : '.클래스명' 을 사용해 class 속성 값과 일치하는 요소들을 선택
+    */
+
+    /*                        */
+
+    /* 속성 선택자 : */
+    /*  */
+
+    /*  */
+
+    /*  */
+  </style>
+</head>
+
+<body>
+
+  <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua.</div>
+
+  <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua.</h2>
+
+  <h3 id="color-red">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+    et dolore magna aliqua.</h3>
+
+  <h3 class="color-green">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+    labore et dolore magna aliqua.</h3>
+
+  <h3 class="color-green background-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.</h3>
+
+  <div title="Lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+    et dolore magna aliqua.</div>
+
+  <div title="ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+    et dolore magna aliqua.</div>
+
+  <div title="dolor">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+    et dolore magna aliqua.</div>
+
+  <div title="ipsum dolor">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+    labore et dolore magna aliqua.</div>
+
+</body>
+
+</html>
