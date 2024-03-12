@@ -1,104 +1,112 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS 백그라운드 1</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS 백그라운드 1</title>
 
-    <style>
+  <style>
+  * {
+    margin: 0px;
+  }
 
-        * {
-            margin: 0px;
-        }
+  /*
+  https://d2ur7st6jjikze.cloudfront.net/offer_photos/53690/336353_large_1553197206.jpg
+  */
 
-        /*
-            https://d2ur7st6jjikze.cloudfront.net/offer_photos/53690/336353_large_1553197206.jpg
-        */
+  /*
+  background-image 속성 : 요소에 백그라운드 배경이미지를 지정
+  */
+  .background-image {
+    height: 100vh;
+    background-image: url('https://d2ur7st6jjikze.cloudfront.net/offer_photos/53690/336353_large_1553197206.jpg');
+  }
 
-        /*
-            background-image 속성 : 
-        */
+  /*
+  background-repeat 속성 : 
+    - 배경이미지의 반복을 제어
+    - 배경이미지의 경우 요소의 전체 사이즈가 배경이미지의 크기보다 크다면 배경이미지가 요소 전체의 사이즈를 모두 채울 때까지 반복됨 
+  */
+  .background-repeat-x {
+    background-repeat: repeat-x;
+  }
+  .background-no-repeat {
+    background-repeat: no-repeat;
+  }
+  /*
+  background-size 속성 : 
+    - 배경이미지의 사이즈를 지정
+    - 배경이미지의 고유 비율을 유지하려는 성질이 있기 때문에 이미지가 짤릴 수 있음
+    - 배경이미지의 너비와 높이 둘 다 지정 가능 (하나만 지정하면 너비만 지정됨)
+  */
 
-
-
-
-        /*
-            background-repeat 속성 : 
-                - 
-                - 
-        */
-        
-
-        
-
-        /*
-            background-size 속성 : 
-                - 
-                - 
-                - 
-        */
-
-        /*
-            px : 
-        */
-        
-
-        /*
-            % : 
-        */
-        
-
-        /*
-            cover : 
-        */
-        
-
-        /*
-            contain : 
-        */
-        
-
-
-    </style>
+  /*
+  px : 절대 값인 px로 너비와 높이를 지정
+  */
+  .background-size-px {
+    background-size: 700px 500px;
+  }
+  /*
+  % : 상대 값인 %로 너비와 높이를 지정
+  */
+  .background-size-percentage {
+    background-size: 100% 100%;
+  }
+  /*
+  cover : 크기의 비율을 유지한 상태에서 부모 요소의 width, height 중 큰 값에 배경 이미지를 맞춤
+  */
+  .background-size-cover {
+    background-size: cover;
+  }
+  /*
+  contain : 배경이미지의 크기 비율을 유지한 상태에서 부모 요소의 영역에 배경이미지가 보이지 않는 부분이 없도록 이미지의 사이즈를 조절
+  */
+  .background-size-contain {
+    background-size: contain;
+  }
+  </style>
 
 </head>
+
 <body>
 
-    <br />
-    <h2>background-image</h2>
-    <br />
-    <div class="background-image"></div>
-    <br />
-    
-    <hr />
+  <br />
+  <h2>background-image</h2>
+  <br />
+  <div class="background-image"></div>
+  <br />
 
-    <br />
-    <h2>background-repeat</h2>
-    <br />
-    <h3>repeat-x</h3>
-    <div class="background-image background-repeat-x"></div>
-    <br />
-    <h3>no-repeat</h3>
-    <div class="background-image background-no-repeat"></div>
-    <br />
+  <hr />
 
-    <hr />
+  <br />
+  <h2>background-repeat</h2>
+  <br />
+  <h3>repeat-x</h3>
+  <div class="background-image background-repeat-x"></div>
+  <br />
+  <h3>no-repeat</h3>
+  <div class="background-image background-no-repeat"></div>
+  <br />
 
-    <br />
-    <h2>background-size</h2>
-    <br />
-    <h3>px</h3>
-    <div class="background-image background-no-repeat background-size-px"></div>
-    <br />
-    <h3>%</h3>
-    <div class="background-image background-no-repeat background-size-percentage"></div>
-    <br />
-    <h3>cover</h3>
-    <div class="background-image background-no-repeat background-size-cover"></div>
-    <br />
-    <h3>contain</h3>
-    <div class="background-image background-no-repeat background-size-contain"></div>
-    <br />
-    
+  <hr />
+
+  <br />
+  <h2>background-size</h2>
+  <br />
+  <h3>px</h3>
+  <div class="background-image background-no-repeat background-size-px"></div>
+  <br />
+  <h3>%</h3>
+  <div class="background-image background-no-repeat background-size-percentage"></div>
+  <br />
+  <h3>cover</h3>
+  <div class="background-image background-no-repeat background-size-cover"></div>
+  <br />
+  <h3>contain</h3>
+  <div class="background-image background-no-repeat background-size-contain"></div>
+  <br />
+
 </body>
+
 </html>
