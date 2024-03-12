@@ -75,21 +75,34 @@
       margin: 50px;
     }
     /*
-  visibility 속성 : 
-    - visible : 
-    - hidden : 
-    - collapse : 
+  visibility 속성 : 요소를 보이게 할지 보이지 않게 할 것인지를 지정
+    - visible : 요소를 보이게 함 (기본값)
+    - hidden : 요소를 보이지 않게 함 (공간은 존재함)
+    - collapse : table에서 행이나 열을 보이지 않게 함
   */
-
+    .visible {
+      visibility: visible;
+    }
+    .hidden {
+      visibility: hidden;
+    }
+    .collapse {
+      visibility: collapse;
+    }
     /*
   opacity 속성 : 
-    - 
-    - 
+    - 요소 전체의 투명도를 지정
+    - 0 ~ 1의 값을 가지며 0은 완전 투명, 1은 완전 불투명
   */
+  .opacity {
+    
+    width: 400px;
+    opacity: 0.5;
+  }
   </style>
 </head>
 
-<body>
+<body style="background-color: beige;">
 
   <h2>Display - block</h2>
   <span class="block-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -136,7 +149,7 @@
   <h2>Opacity</h2>
   <img class="opacity"
     src="https://flexible.img.hani.co.kr/flexible/normal/970/1454/imgdb/original/2023/0102/20230102502386.jpg"
-    alt="아이유">
+    alt="아이유" />
 
 </body>
 
