@@ -10,7 +10,7 @@
       font-size: 24px;
     }
 
-  /* 
+    /* 
   박스모델 : 
     - 모든 HTML 요소는 박스 형태의 사각형 영역을 가지고 있음
     - HTML 박스 모델은 컨텐츠, 패딩, 테두리, 마진으로 이루어져 있음
@@ -23,52 +23,72 @@
     - 박스모델의 컨텐츠, 패딩, 테두리, 마진 속성은 상속되지 않음
   */
 
-  /*
+    /*
   width / height :
     - 요소의 너비와 높이를 지정하기 위해 사용됨
     - *기본적으로 컨텐츠 영역을 대상으로 사이즈를 조절
     - width, height 속성으로 지정한 사이즈가 실제 컨텐츠 사이즈보다 작다면 컨텐츠가 흘러 넘침
     - overflow 속성으로 넘친 컨텐츠에 대해 조절을 할 수 있음
   */
-  .width-height-1 {
-    width: 300px;
-    height: 300px;
-    background-color: rgba(255, 0, 0, 0.2);
-  }
+    .width-height-1 {
+      width: 300px;
+      height: 300px;
+      background-color: rgba(255, 0, 0, 0.2);
+    }
 
-  .width-height-2 {
-    width: 300px;
-    height: 50px;
-    background-color: rgba(0, 0, 255, 0.2);
-    overflow: auto;
-  }
-  /*
+    .width-height-2 {
+      width: 300px;
+      height: 50px;
+      background-color: rgba(0, 0, 255, 0.2);
+      overflow: auto;
+    }
+
+    /*
   width와 height가 실제 전체 박스 크기를 지정하지 않음을 주의
     - 전체 너비 : width + left padding + right padding + left border + right border + left margin + right margin
     - 전체 높이 : height + top padding + bottom padding + top border + bottom border + top margin + bottom margin
   */
 
-  /*
+    /*
   max / min - width / height : 컨텐츠의 (최대, 최소) (높이, 너비)를 지정할 수 있음
   */
-  .min-max {
-    width: 50vw;
-    min-width: 300px;
-    max-width: 600px;
-    height: 50vh;
-    min-height: 150px;
-    max-height: 300px;
-    background-color: rgba(0, 255, 0, 0.2);
-  }
+    .min-max {
+      width: 50vw;
+      min-width: 300px;
+      max-width: 600px;
+      height: 50vh;
+      min-height: 150px;
+      max-height: 300px;
+      background-color: rgba(0, 255, 0, 0.2);
+    }
 
 
-  /*
+    /*
   margin / padding :
-    - 
+    - 마진과 패딩은 컨텐츠 기준으로 4개 방향 (top, right, buttom, left)에 대해서 지정 가능
   */
+    .margin-padding-1 {
+      border: 5px solid red;
+      margin-top: 40px;
+      margin-right: 30px;
+      margin-bottom: 20px;
+      margin-left: 10px;
 
+      padding-top: 10px;
+      padding-right: 20px;
+      padding-bottom: 30px;
+      padding-left: 40px;
+    }
 
-  /*
+    .margin-padding-2 {
+      border: 5px solid blue;
+      margin: 40px;
+      padding: 10px;
+      /* margin: 40px 30px 20px 10px;
+    padding: 10px 20px 30px 40px; */
+    }
+
+    /*
   margin[padding] : 상 우 하 좌;
   margin[padding] : 상 우좌 하;
   margin[padding] : 상하 우좌;
@@ -77,19 +97,36 @@
 
 
 
-  /*
+    /*
   border : 
-    - 
+    - 테두리 선의 스타일, 두께, 색상, 모서리 각도에 대하여 지정 가능
   */
 
-  /*
-  border-style : 
-    - 
-    - 
+    /*
+  border-style : 테두리 선 스타일 지정
+    - solid : 실선
+    - noe : 테두리 제거
   */
+    .border-style-1 {
+      border-style: solid;
+    }
 
+    .border-style-2 {
+      border-style: none solid;
+    }
 
-  /*
+    .border-style-3 {
+      border-style: none;
+      outline-style: none;
+      padding: 8px;
+      margin: 8px;
+    }
+
+    .border-style-3:focus {
+      background-color: beige;
+    }
+
+    /*
   border-style : 상 우 하 좌;
   border-style : 상 우좌 하;
   border-style : 상하 우좌;
@@ -97,12 +134,19 @@
   */
 
 
-  /*
-  border-width : 
+    /*
+  border-width : 테두리 선의 두께 지정, border-style과 함께 사용해야 함
   */
+  .border-width-1 {
+    border-style: dotted;
+    border-width: 10px;
+  }
+  .border-width-2 {
+    border-style: double solid dotted none;
+    border-width: 0.5rem 4px 0.25rem 0px;
+  }
 
-
-  /*
+    /*
   border-width : 상 우 하 좌;
   border-width : 상 우좌 하;
   border-width : 상하 우좌;
@@ -110,12 +154,21 @@
   */
 
 
-  /*
-  border-color : 
+    /*
+  border-color : 테두리 선의 색상 지정, border-style과 함께 사용해야 함
   */
+  .border-color-1 {
+    border-style: solid;
+    border-color: red;
+    border-width: 2px;
+  }
+  .border-color-2 {
+    border-style: solid;
+    border-width: 2px;
+    border-color: green blue;
+  }
 
-
-  /*
+    /*
   border-color : 상 우 하 좌;
   border-color : 상 우좌 하;
   border-color : 상하 우좌;
@@ -123,32 +176,32 @@
   */
 
 
-  /*
+    /*
   border-radius : 
   */
 
 
-  /*
+    /*
   border-radius : tl tr br bl;
   border-radius : tl trbl br;
   border-radius : tlbr trbl;
   border-radius : all;
   */
 
-  /* 타원형 모서리 적용 방법 */
+    /* 타원형 모서리 적용 방법 */
 
 
-  /*
+    /*
   border-radius : tlx trx brx blx / tly try bry bly;
   */
 
-  /*
+    /*
   border : 
     - 
   */
 
 
-  /* 
+    /* 
   box-sizing : 
     - 
     - 
@@ -177,15 +230,17 @@
 
   <div class="border-style-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
     ut labore et dolore magna aliqua.</div>
-  <br>
+  <br />
   <div class="border-style-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
     ut labore et dolore magna aliqua.</div>
+  <br />
+  <input class="border-style-3" type="text" name="" id="">
 
   <hr />
 
   <div class="border-width-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
     ut labore et dolore magna aliqua.</div>
-  <br>
+  <br />
   <div class="border-width-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
     ut labore et dolore magna aliqua.</div>
 
@@ -201,7 +256,7 @@
 
   <div class="border-radius-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
     ut labore et dolore magna aliqua.</div>
-  <br>
+  <br />
   <div class="border-radius-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
     ut labore et dolore magna aliqua.</div>
 
@@ -219,7 +274,7 @@
 
   <div class="content-box">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
     labore et dolore magna aliqua.</div>
-  <br>
+  <br />
   <div class="border-box">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
     labore et dolore magna aliqua.</div>
 
