@@ -1,47 +1,70 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS 단위 2</title>
-    <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS 단위 2</title>
+  <style>
+  /* 색상 단위 */
 
-        /* 색상 단위 */
+  /* Hex 코드 단위 : RGB 방식으로 이루어진 색상 표기법으로 #과 16진수로 이루어진 6자리 혹은 3자리의 수로 색상을 표기하는 방법 */
+  .hex-1 {
+    color: #ff0000;
+  }
 
-        /* Hex 코드 단위 : */
+  .hex-2 {
+    color: #0f0;
+  }
+  /* RGB : RGB 방식의 색상 표기법 빨강, 초록, 파랑을 0 ~ 255 까지 10진수로 표기하는 방법*/
+  .rgb {
+    color: rgb(0, 0, 255);
+  }
+  /* RGBA : RGB에 0 ~ 1 까지의 투명도를 나타내는 Alpha 채널을 추가한 방법 (0이 완전 투명, 1이 완전 불투명) */
+  .rgba {
+    background-color: rgba(255, 0, 255, 0.3);
+  }
+  /* HSL : 색상, 채도, 명도 표기법으로 색상은 0 ~ 360 까지의 정수, 채도와 명도는 백분율(0 ~ 100%)로 표기하는 방법(0:빨강, 120:초록, 240:파랑)*/
+  .hsl {
+    background-color: hsl(180, 40%, 50%);
+  }
+  /* HSLA : HSL에 0 ~ 1 까지의 투명도를 나타내는 Alpha채널을 추가한 방법 (0:완전투명, 1:완전 불투명) */
+  .hsla {
+    background-color: hsla(300, 70%, 50%, 0.3);
+  }
 
-        /* RGB : */
-
-        /* RGBA : */
-
-        /* HSL : */
-
-        /* HSLA : */
-
-    </style>
+  </style>
 </head>
+
 <body>
 
-    <h3 class="hex-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
-    <h3 class="hex-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+  <h3 class="hex-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+    et dolore magna aliqua.</h3>
+  <h3 class="hex-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+    et dolore magna aliqua.</h3>
 
-    <hr />
+  <hr />
 
-    <h3 class="rgb">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+  <h3 class="rgb">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+    dolore magna aliqua.</h3>
 
-    <hr />
+  <hr />
 
-    <h3 class="rgba">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+  <h3 class="rgba">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+    et dolore magna aliqua.</h3>
 
-    <hr />
+  <hr />
 
-    <h3 class="hsl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+  <h3 class="hsl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+    dolore magna aliqua.</h3>
 
-    <hr />
+  <hr />
 
-    <h3 class="hsla">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+  <h3 class="hsla">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+    et dolore magna aliqua.</h3>
 
-    <hr />
-    
+  <hr />
+
 </body>
+
 </html>
