@@ -67,35 +67,93 @@
     flex-direction: column-reverse;
   }
 
+  /*
+  flex-wrap 속성 : flex container의 범위를 초과하는 flex item을 1행에 표현할지 여러행에 걸쳐서 표현할지 지정
+    - nowrap : flex item을 줄을 바꾸지않고 한 행에 배치(기본값)
+    - wrap : flex item의 너비의 총합이 container의 너비를 초과하면 줄을 바꿔서 배치
+    - wrap-reverse : wrap과 동일하나 초과하는 범위를 위로 배치
+  */
+  .flex-nowrap-container {
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .flex-wrap-container {
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .flex-wrap-reverse-container {
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
 
   /*
-  flex-wrap 속성 : 
-    - 
-
-    - 
-    - 
-    - 
+  justify-content 속성 : 주 축 기준으로 수평 정렬
+    - flex-start : 주 축의 시작점으로 정렬(기본값)
+    - flex-end : 주 축의 종료점으로 정렬
+    - center : 주 축의 중앙으로 정렬
+    - space-between : 첫번째 item과 마지막 아이템을 시작점과 종료점에 붙이고 균등한 간격을 가지게 정렬
+    - space-around : 모든 item의 좌우측 간격을 동일하게 정렬
   */
-
+  .flex-j-start-container {
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: start;
+  }
+  .flex-j-end-container {
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: end;
+  }
+  .flex-j-center-container {
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+  }
+  .flex-j-space-between-container {
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .flex-j-space-around-container {
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-around;
+  }
 
   /*
-  justify-content 속성 : 
-    - 
-    - 
-    - 
-    - 
-    - 
+  align-items 속성 : 교차 축 기준으로 정렬 (주축 기준으로 봤을 땐 수직 정렬)
+    - stretch : flex item이 flex container의 높이에 맞추는 높이를 가짐
+    - flex-start : flex item을 flex container의 교차 축의 시작점으로 정렬
+    - flex-end : flex item을 flex container의 교차 축의 종료점으로 정렬
+    - center : flex item을 flex container의 교차 축의 중앙으로 정렬
   */
-
-
-
-  /*
-  align-items 속성 : 
-    - 
-    - 
-    - 
-    - 
-  */
+  .flex-a-stretch-container {
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: stretch;
+  }
+  .flex-a-start-container {
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: flex-start;
+  }
+  .flex-a-end-container {
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: flex-end;
+  }
+  .flex-a-center-container {
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+  }
   </style>
 
 </head>
