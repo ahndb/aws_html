@@ -7,41 +7,68 @@
   <title>CSS FlexBox 1</title>
 
   <style>
-    /*
+  /*
   flexbox : 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
+    - 요소의 사이즈가 불명확하거나 반응형 웹을 구축할 때 유연한 레이아웃을 실현 가능하게 함
+    - 복잡한 레이아웃도 간단한 코드로 표현가능
+    
+    - 장점 : 
+    - 1줄의 코드로 수평, 수직 정렬이 가능
+    - 요소간 상하좌우 정렬, 순서 변경이 수월함
+    - 요소간 간격 조절이 편리함
   */
 
-    /*
-  flexbox container : 
-    - 
-    -   
+  /*
+  flexbox container : flex item을 자식으로 가지는 부모 요소, display 속성 값을 flex 혹은 inline-flex로 지정하여 사용 가능
+    - flex : flex container를 block 레벨 요소로 지정
+    - inline-flex : flex container를 inline 레벨 요소로 지정
   */
-
-
-
-
-    /*
+  .flex-container {
+    display: flex;
+  }
+  .inline-flex-container {
+    display: inline-flex;
+  }
+  /*
   flexbox container 속성
   */
 
-    /*
-  flex-direction 속성 : 
-    - 
-    - 
-    - 
-    - 
+  /*
+  flex-direction 속성 : flex container의 주축 방향 지정
+    - row : 좌에서 우로 수평 배치 (기본값)
+    - row-reverse : 우에서 좌로 수평 배치
+    - column : 위에서 아래로 수직 배치
+    - column-reverse : 아래에서 위로 수직 배치
   */
+  .flex-item-sample {
+    width: 200px;
+    padding: 25px;
+    text-align: center;
+    border: 1px solid black;
+  }
+  .flex-row-container {
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+  }
+  .flex-row-reverse-container {
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .flex-column-container {
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+  }
+  .flex-column-reverse-container {
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column-reverse;
+  }
 
 
-
-    /*
+  /*
   flex-wrap 속성 : 
     - 
 
@@ -51,7 +78,7 @@
   */
 
 
-    /*
+  /*
   justify-content 속성 : 
     - 
     - 
@@ -62,7 +89,7 @@
 
 
 
-    /*
+  /*
   align-items 속성 : 
     - 
     - 

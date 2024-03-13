@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSS 스타일의 우선순위</title>
-  
+
   <link rel="stylesheet" href="./style.css" />
-  
+
   <style>
     /*
     CSS 스타일 지정 우선순위 : 
@@ -16,7 +16,7 @@
     - 명시도: CSS가 명확하게 지칭하고 있는가
     - 선언순서: CSS가 언제 선언되었는가
     */
-    
+
     /*
     중요도 : 
     - 1순위 : Embedded style
@@ -29,7 +29,7 @@
       background-color: white;
       color: rgba(0, 0, 0, 0.8);
     }
-    
+
     /*
     명시도 : CSS가 명확하게 특정되었는가
     - 1순위 : !important
@@ -43,39 +43,39 @@
     * {
       color: rgba(0, 0, 255, 0.8) !important;
     }
-    
+
     #id-selector {
       color: rgba(255, 0, 0, 0.8);
     }
-    
+
     .class-selector {
       color: rgba(0, 255, 0, 0.8);
     }
-    
+
     p {
       color: rgba(255, 255, 0, 0.8);
     }
-    
+
     div {
       color: rgba(255, 0, 255, 0.8);
     }
-    
+
     /*
     선언순서 : 나중에 선언된 스타일로 덮어 씌워짐
     */
     h4 {
       background-color: rgba(0, 0, 255, 0.8);
     }
-    
+
     h4 {
       background-color: rgba(0, 255, 0, 0.8);
     }
-    </style>
+  </style>
 
 </head>
 
 <body>
-  
+
   <div>
     <p id="id-selector" class="class-selector" style="color: rgba(0, 255, 255, 0.8);">Lorem ipsum dolor sit amet,
       consectetur adipiscing elit. Curabitur in
