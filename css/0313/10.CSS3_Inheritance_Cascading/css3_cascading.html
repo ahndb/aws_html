@@ -5,55 +5,80 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSS 스타일의 우선순위</title>
-
+  
   <link rel="stylesheet" href="./style.css" />
-
+  
   <style>
-  /*
-  CSS 스타일 지정 우선순위 : 
-    -  
-    - 
-    - 
-    - 
-  */
-
-  /*
-  중요도 : 
-    - 1순위 : 
-    - 2순위 : 
-    - 3순위 : 
-    - 4순위 : 
-    - 5순위 : 
-  */
-
-
-
-
-  /*
-  명시도 : 
-    - 1순위 : 
-    - 2순위 : 
-    - 3순위 : 
-    - 4순위 : 
-    - 5순위 : 
-    - 6순위 : 
-    - 7순위 : 
-  */
-
-
-
-
-  /*
-  선언순서 : 
-  */
-  </style>
+    /*
+    CSS 스타일 지정 우선순위 : 
+    - CSS 충돌을 방지하기 위해 CSS 우선순위가 적용됨
+    - 중요도: CSS가 어디에 선언되었는가
+    - 명시도: CSS가 명확하게 지칭하고 있는가
+    - 선언순서: CSS가 언제 선언되었는가
+    */
+    
+    /*
+    중요도 : 
+    - 1순위 : Embedded style
+    - 2순위 : Embedded style의 @import문
+    - 3순위 : Link style
+    - 4순위 : Link style의 @import 문
+    - 5순위 : 브라우저 디폴트 값
+    */
+    body {
+      background-color: white;
+      color: rgba(0, 0, 0, 0.8);
+    }
+    
+    /*
+    명시도 : CSS가 명확하게 특정되었는가
+    - 1순위 : !important
+    - 2순위 : inline style
+    - 3순위 : id 선택자
+    - 4순위 : class / 속성 / 가상 선택자
+    - 5순위 : 태그 선택자
+    - 6순위 : 전체 선택자
+    - 7순위 : 상속된 속성
+    */
+    * {
+      color: rgba(0, 0, 255, 0.8) !important;
+    }
+    
+    #id-selector {
+      color: rgba(255, 0, 0, 0.8);
+    }
+    
+    .class-selector {
+      color: rgba(0, 255, 0, 0.8);
+    }
+    
+    p {
+      color: rgba(255, 255, 0, 0.8);
+    }
+    
+    div {
+      color: rgba(255, 0, 255, 0.8);
+    }
+    
+    /*
+    선언순서 : 나중에 선언된 스타일로 덮어 씌워짐
+    */
+    h4 {
+      background-color: rgba(0, 0, 255, 0.8);
+    }
+    
+    h4 {
+      background-color: rgba(0, 255, 0, 0.8);
+    }
+    </style>
 
 </head>
 
 <body>
-
+  
   <div>
-    <p id="id-selector" class="class-selector">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in
+    <p id="id-selector" class="class-selector" style="color: rgba(0, 255, 255, 0.8);">Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit. Curabitur in
       egestas purus. Etiam in luctus ligula. Suspendisse potenti. Praesent pretium orci leo, eget suscipit elit mollis
       vel. Aenean accumsan bibendum rhoncus. Maecenas sed nibh lacinia nisi tincidunt vehicula convallis id diam.
       Curabitur maximus, mauris at placerat pretium, ipsum libero pellentesque velit, in tristique quam tellus et ipsum.
