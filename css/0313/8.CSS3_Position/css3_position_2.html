@@ -8,7 +8,7 @@
 
   <style>
   /*
-  z-index 속성 :
+  z-index 속성 : 지정된 숫자가 높을 수록 앞에 출력되게 하는 속성
   */
   #relative-parent {
     width: 500px;
@@ -43,10 +43,18 @@
     top: 50px;
     right: 100px;
   }
-
-
-
-
+  .z-0 {
+    z-index: 0;
+  }
+  .z-5 {
+    z-index: 10;
+  }
+  .z-10 {
+    z-index: 15;
+  }
+  .z-15 {
+    z-index: 5;
+  }
   /*
   overflow 속성 : 
     - 
@@ -68,10 +76,10 @@
 
   <h2>z-index</h2>
 
-  <div id="relative-parent" class="z-">
-    <div id="absolute-item-1" class="z-"></div>
-    <div id="absolute-item-2" class="z-"></div>
-    <div id="absolute-item-3" class="z-"></div>
+  <div id="relative-parent" class="z-0">
+    <div id="absolute-item-1" class="z-5"></div>
+    <div id="absolute-item-2" class="z-10"></div>
+    <div id="absolute-item-3" class="z-15"></div>
   </div>
 
   <hr />
