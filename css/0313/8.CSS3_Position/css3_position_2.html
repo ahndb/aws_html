@@ -7,6 +7,13 @@
   <title>CSS 요소 위치 정의 2</title>
 
   <style>
+    * {
+      margin: 0px;
+    }
+  /* 스크롤바 제거 */
+  body::-webkit-scrollbar {
+    display: none;
+  }
   /*
   z-index 속성 : 지정된 숫자가 높을 수록 앞에 출력되게 하는 속성
   */
@@ -56,17 +63,29 @@
     z-index: 5;
   }
   /*
-  overflow 속성 : 
-    - 
-    - 
-    - 
-    - 
+  overflow 속성 : 자식 요소가 부모 요소 크기를 벗어났을 때 처리하는 방법
+    - visible : 영역을 벗어난 부분을 표시 (기본값)
+    - hidden  : 영역을 벗어난 부분을 잘라냄
+    - scroll  : 영역이 벗어난 부분이 없어도 스크롤바를 표시
+    - auto  : 영역이 벗어난 부분이 있을 때 스크롤바를 표시
   */
   .inline-block-parent {
     display: inline-block;
     width: 400px;
     height: 250px;
     background-color: rgba(0, 0, 0, 0.2);
+  }
+  .overflow-visible {
+    overflow: visible;
+  }
+  .overflow-hidden{
+    overflow: hidden;
+  }
+  .overflow-scroll {
+    overflow: scroll;
+  }
+  .overflow-auto {
+    overflow: auto;
   }
   </style>
 
@@ -125,6 +144,9 @@
   <div class="inline-block-parent overflow-auto"">
       <h3>auto</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in egestas purus. Etiam in luctus ligula. Suspendisse potenti. Praesent pretium orci leo, eget suscipit elit mollis vel. Aenean accumsan bibendum rhoncus. Maecenas sed nibh lacinia nisi tincidunt vehicula convallis id diam. Curabitur maximus, mauris at placerat pretium, ipsum libero pellentesque velit, in tristique quam tellus et ipsum. Proin commodo ornare dolor vel luctus. Quisque a blandit neque. Vestibulum consequat pellentesque pretium. Fusce quis sagittis odio, consectetur pharetra erat. Etiam id turpis sem. Curabitur ultrices arcu quis nulla blandit, non pellentesque diam euismod. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent bibendum velit et dui auctor, eu auctor metus congue. Aliquam aliquet nulla vitae ultrices eleifend.</p>
+  </div>
+
+  <div style="width: 100vw; height: 30px; background-color: blue;">
   </div>
 
 </body>
