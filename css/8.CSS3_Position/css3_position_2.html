@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 요소 위치 정의 2</title>
+
+    <style>
+
+        /*
+            z-index 속성 :
+        */
+        #relative-parent {
+            width: 500px;
+            height: 500px;
+            background-color: rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        #absolute-item-1 {
+            width: 200px;
+            height: 200px;
+            background-color: rgba(255, 0, 0, 1);
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+
+        #absolute-item-2 {
+            width: 200px;
+            height: 200px;
+            background-color: rgba(0, 255, 0, 1);
+            position: absolute;
+            bottom: 100px;
+            left: 150px;
+        }
+
+        #absolute-item-3 {
+            width: 200px;
+            height: 200px;
+            background-color: rgba(0, 0, 255, 1);
+            position: absolute;
+            top: 50px;
+            right: 100px;
+        }
+
+        
+
+
+        /*
+            overflow 속성 : 
+                - 
+                - 
+                - 
+                - 
+        */
+        .inline-block-parent {
+            display: inline-block;
+            width: 400px;
+            height: 250px;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        
+
+    </style>
+
+</head>
+<body>
+    
+    <h2>z-index</h2>
+
+    <div id="relative-parent" class="z-">
+        <div id="absolute-item-1" class="z-"></div>
+        <div id="absolute-item-2" class="z-"></div>
+        <div id="absolute-item-3" class="z-"></div>
+    </div>
+
+    <hr />
+
+    <h2>overflow</h2>
+
+    <div class="inline-block-parent overflow-visible">
+        <h3>visible</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in egestas purus. Etiam in luctus ligula. Suspendisse potenti. Praesent pretium orci leo, eget suscipit elit mollis vel. Aenean accumsan bibendum rhoncus. Maecenas sed nibh lacinia nisi tincidunt vehicula convallis id diam. Curabitur maximus, mauris at placerat pretium, ipsum libero pellentesque velit, in tristique quam tellus et ipsum. Proin commodo ornare dolor vel luctus. Quisque a blandit neque. Vestibulum consequat pellentesque pretium. Fusce quis sagittis odio, consectetur pharetra erat. Etiam id turpis sem. Curabitur ultrices arcu quis nulla blandit, non pellentesque diam euismod. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent bibendum velit et dui auctor, eu auctor metus congue. Aliquam aliquet nulla vitae ultrices eleifend.</p>
+    </div>
+
+    <div class="inline-block-parent overflow-hidden">
+        <h3>hidden</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in egestas purus. Etiam in luctus ligula. Suspendisse potenti. Praesent pretium orci leo, eget suscipit elit mollis vel. Aenean accumsan bibendum rhoncus. Maecenas sed nibh lacinia nisi tincidunt vehicula convallis id diam. Curabitur maximus, mauris at placerat pretium, ipsum libero pellentesque velit, in tristique quam tellus et ipsum. Proin commodo ornare dolor vel luctus. Quisque a blandit neque. Vestibulum consequat pellentesque pretium. Fusce quis sagittis odio, consectetur pharetra erat. Etiam id turpis sem. Curabitur ultrices arcu quis nulla blandit, non pellentesque diam euismod. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent bibendum velit et dui auctor, eu auctor metus congue. Aliquam aliquet nulla vitae ultrices eleifend.</p>
+    </div>
+
+    <div class="inline-block-parent overflow-scroll">
+        <h3>scroll</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in egestas purus. Etiam in luctus ligula. Suspendisse potenti. Praesent pretium orci leo, eget suscipit elit mollis vel. Aenean accumsan bibendum rhoncus. Maecenas sed nibh lacinia nisi tincidunt vehicula convallis id diam. Curabitur maximus, mauris at placerat pretium, ipsum libero pellentesque velit, in tristique quam tellus et ipsum. Proin commodo ornare dolor vel luctus. Quisque a blandit neque. Vestibulum consequat pellentesque pretium. Fusce quis sagittis odio, consectetur pharetra erat. Etiam id turpis sem. Curabitur ultrices arcu quis nulla blandit, non pellentesque diam euismod. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent bibendum velit et dui auctor, eu auctor metus congue. Aliquam aliquet nulla vitae ultrices eleifend.</p>
+    </div>
+
+    <div class="inline-block-parent overflow-auto"">
+        <h3>auto</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in egestas purus. Etiam in luctus ligula. Suspendisse potenti. Praesent pretium orci leo, eget suscipit elit mollis vel. Aenean accumsan bibendum rhoncus. Maecenas sed nibh lacinia nisi tincidunt vehicula convallis id diam. Curabitur maximus, mauris at placerat pretium, ipsum libero pellentesque velit, in tristique quam tellus et ipsum. Proin commodo ornare dolor vel luctus. Quisque a blandit neque. Vestibulum consequat pellentesque pretium. Fusce quis sagittis odio, consectetur pharetra erat. Etiam id turpis sem. Curabitur ultrices arcu quis nulla blandit, non pellentesque diam euismod. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent bibendum velit et dui auctor, eu auctor metus congue. Aliquam aliquet nulla vitae ultrices eleifend.</p>
+    </div>
+
+</body>
+</html>

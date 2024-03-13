@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 요소 정렬</title>
+
+    <style>
+
+        /*
+            float 속성 : 
+                - 
+                - 
+                - 
+                - 
+                - 
+                - 
+        */
+        #parent {
+            background-color: rgba(0, 0, 0, 0.2);
+            height: 500px;
+            margin: 0 10px;
+            padding: 10px;
+        }
+        .child {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: rgba(0, 0, 255, 0.5);
+            margin: 20px 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="parent">
+        <div class="child float-left">1</div>
+        <div class="child float-right">2</div>
+        <div class="child float-left">3</div>
+        <div class="child float-right">4</div>
+    </div>
+    
+</body>
+</html>

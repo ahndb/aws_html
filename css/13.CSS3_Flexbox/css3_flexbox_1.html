@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS FlexBox 1</title>
+
+    <style>
+
+        /*
+            flexbox : 
+                - 
+                - 
+                - 
+                - 
+                - 
+                - 
+                - 
+        */
+
+        /*
+            flexbox container : 
+                - 
+                - 
+        */
+        
+
+
+
+        /*
+            flexbox container 속성
+        */
+
+        /*
+            flex-direction 속성 : 
+                - 
+                - 
+                - 
+                - 
+        */
+        
+
+
+        /*
+            flex-wrap 속성 : 
+                - 
+
+                - 
+                - 
+                - 
+        */
+
+
+        /*
+            justify-content 속성 : 
+                - 
+                - 
+                - 
+                - 
+                - 
+        */
+
+        
+
+        /*
+            align-items 속성 : 
+                - 
+                - 
+                - 
+                - 
+        */
+        
+
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="flex-container">flex container</div>
+    <div class="inline-flex-container">inline-flex container</div>
+    <div class="inline-flex-container">inline-flex container</div>
+
+    <hr />
+
+    <h2>flex-direction</h2>
+
+    <div class="flex-row-container">
+        <div class="flex-item-sample">1</div>
+        <div class="flex-item-sample">2</div>
+        <div class="flex-item-sample">3</div>
+        <div class="flex-item-sample">4</div>
+    </div>
+
+    <br />
+
+    <div class="flex-row-reverse-container">
+        <div class="flex-item-sample">1</div>
+        <div class="flex-item-sample">2</div>
+        <div class="flex-item-sample">3</div>
+        <div class="flex-item-sample">4</div>
+    </div>
+
+    <br />
+
+    <div class="flex-column-container">
+        <div class="flex-item-sample">1</div>
+        <div class="flex-item-sample">2</div>
+        <div class="flex-item-sample">3</div>
+        <div class="flex-item-sample">4</div>
+    </div>
+
+    <br />
+
+    <div class="flex-column-reverse-container">
+        <div class="flex-item-sample">1</div>
+        <div class="flex-item-sample">2</div>
+        <div class="flex-item-sample">3</div>
+        <div class="flex-item-sample">4</div>
+    </div>
+
+    <hr />
+
+    <h2>flex-wrap</h2>
+
+    <div class="flex-nowrap-container">
+        <div class="flex-item-sample">1</div>
+        <div class="flex-item-sample">2</div>
+        <div class="flex-item-sample">3</div>
+        <div class="flex-item-sample">4</div>
+        <div class="flex-item-sample">5</div>
+        <div class="flex-item-sample">6</div>
+        <div class="flex-item-sample">7</div>
+        <div class="flex-item-sample">8</div>
+        <div class="flex-item-sample">9</div>
+        <div class="flex-item-sample">10</div>
+        <div class="flex-item-sample">11</div>
+        <div class="flex-item-sample">12</div>
+        <div class="flex-item-sample">13</div>
+        <div class="flex-item-sample">14</div>
+        <div class="flex-item-sample">15</div>
+        <div class="flex-item-sample">16</div>
+    </div>
+
+    <br />
+
+    <div class="flex-wrap-container">
+        <div class="flex-item-sample">1</div>
+        <div class="flex-item-sample">2</div>
+        <div class="flex-item-sample">3</div>
+        <div class="flex-item-sample">4</div>
+        <div class="flex-item-sample">5</div>
+        <div class="flex-item-sample">6</div>
+        <div class="flex-item-sample">7</div>
+        <div class="flex-item-sample">8</div>
+        <div class="flex-item-sample">9</div>
+        <div class="flex-item-sample">10</div>
+        <div class="flex-item-sample">11</div>
+        <div class="flex-item-sample">12</div>
+        <div class="flex-item-sample">13</div>
+        <div class="flex-item-sample">14</div>
+        <div class="flex-item-sample">15</div>
+        <div class="flex-item-sample">16</div>
+    </div>
+
+    <br />
+
+    <div class="flex-wrap-reverse-container">
+        <div class="flex-item-sample">1</div>
+        <div class="flex-item-sample">2</div>
+        <div class="flex-item-sample">3</div>
+        <div class="flex-item-sample">4</div>
+        <div class="flex-item-sample">5</div>
+        <div class="flex-item-sample">6</div>
+        <div class="flex-item-sample">7</div>
+        <div class="flex-item-sample">8</div>
+        <div class="flex-item-sample">9</div>
+        <div class="flex-item-sample">10</div>
+        <div class="flex-item-sample">11</div>
+        <div class="flex-item-sample">12</div>
+        <div class="flex-item-sample">13</div>
+        <div class="flex-item-sample">14</div>
+        <div class="flex-item-sample">15</div>
+        <div class="flex-item-sample">16</div>
+    </div>
+
+    <hr />
+
+    <h2>justify-content</h2>
+
+    <div class="flex-j-start-container">
+        <div class="flex-item-sample">1</div>
+        <div class="flex-item-sample">2</div>
+        <div class="flex-item-sample">3</div>
+        <div class="flex-item-sample">4</div>
+    </div>
+
+    <br />
+
+    <div class="flex-j-end-container">
+        <div class="flex-item-sample">1</div>
+        <div class="flex-item-sample">2</div>
+        <div class="flex-item-sample">3</div>
+        <div class="flex-item-sample">4</div>
+    </div>
+
+    <br />
+
+    <div class="flex-j-center-container">
+        <div class="flex-item-sample">1</div>
+        <div class="flex-item-sample">2</div>
+        <div class="flex-item-sample">3</div>
+        <div class="flex-item-sample">4</div>
+    </div>
+
+    <br />
+
+    <div class="flex-j-space-between-container">
+        <div class="flex-item-sample">1</div>
+        <div class="flex-item-sample">2</div>
+        <div class="flex-item-sample">3</div>
+        <div class="flex-item-sample">4</div>
+    </div>
+
+    <br />
+
+    <div class="flex-j-space-around-container">
+        <div class="flex-item-sample">1</div>
+        <div class="flex-item-sample">2</div>
+        <div class="flex-item-sample">3</div>
+        <div class="flex-item-sample">4</div>
+    </div>
+
+    <hr />
+
+    <h2>align-items</h2>
+
+    <div class="flex-a-stretch-container">
+        <div class="flex-item-sample">1</div>
+        <div class="flex-item-sample">2</div>
+        <div class="flex-item-sample">3</div>
+        <div class="flex-item-sample">4</div>
+    </div>
+
+    <br />
+
+    <div class="flex-a-start-container">
+        <div class="flex-item-sample">1</div>
+        <div class="flex-item-sample">2</div>
+        <div class="flex-item-sample">3</div>
+        <div class="flex-item-sample">4</div>
+    </div>
+
+    <br />
+
+    <div class="flex-a-end-container">
+        <div class="flex-item-sample">1</div>
+        <div class="flex-item-sample">2</div>
+        <div class="flex-item-sample">3</div>
+        <div class="flex-item-sample">4</div>
+    </div>
+
+    <br />
+
+    <div class="flex-a-center-container">
+        <div class="flex-item-sample">1</div>
+        <div class="flex-item-sample">2</div>
+        <div class="flex-item-sample">3</div>
+        <div class="flex-item-sample">4</div>
+    </div>
+
+</body>
+</html>

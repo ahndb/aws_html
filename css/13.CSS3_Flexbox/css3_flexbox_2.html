@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS FlexBox 2</title>
+
+    <style>
+
+        /*
+            flex item 속성
+        */
+
+        .flex-container { 
+            display: flex; 
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .flex-item {
+            width: 150px;
+            padding: 25px;
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 1);
+        }
+
+        /*
+            order 속성 : 
+                - 
+                - 
+        */
+        
+
+
+        /*
+            flex-grow 속성 : 
+                - 
+        */
+        
+
+
+        /*
+            flex-shrink 속성 : 
+                - 
+        */
+        
+
+
+    </style>
+
+</head>
+<body>
+
+    <h2>order</h2>
+
+    <div class="flex-container">
+        <div class="flex-item flex-order-item-2">1</div>
+        <div class="flex-item flex-order-item-4">2</div>
+        <div class="flex-item flex-order-item-1">3</div>
+        <div class="flex-item flex-order-item-3">4</div>
+    </div>
+
+    <hr />
+
+    <h2>flex-grow</h2>
+
+    <div class="flex-container">
+        <div class="flex-item flex-grow-item-1">1</div>
+        <div class="flex-item flex-grow-item-2">2</div>
+        <div class="flex-item flex-grow-item-3">3</div>
+        <div class="flex-item flex-grow-item-4">4</div>
+    </div>
+
+    <hr />
+
+    <h2>flex-shrink</h2>
+
+    <div class="flex-container">
+        <div class="flex-item flex-shrink-item-1">1</div>
+        <div class="flex-item flex-shrink-item-2">2</div>
+        <div class="flex-item flex-shrink-item-3">3</div>
+        <div class="flex-item flex-shrink-item-4">4</div>
+    </div>
+
+    <hr />
+    
+</body>
+</html>
