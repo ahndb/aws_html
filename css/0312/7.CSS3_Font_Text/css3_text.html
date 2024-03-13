@@ -7,63 +7,108 @@
   <title>CSS 텍스트</title>
 
   <style>
-  /*
+    /*
   line-height 속성 : 텍스트 높이 지정
     - 컨텐츠의 높이와 텍스트 높이를 맞춰서 텍스트의 수직 중앙 정렬에도 사용할 수 있음
   */
-  .line-height {
-    height: 70px;
-    background-color: rgba(0, 0, 0, 0.2);
-    line-height: 70px;
-  }
-  /*
+    .line-height {
+      height: 70px;
+      background-color: rgba(0, 0, 0, 0.2);
+      line-height: 70px;
+    }
+
+    /*
   letter-spacing 속성 : 글자 사이 간격을 지정
   */
-  .letter-spacing {
-    letter-spacing: -1px;
-  }
-  /*
+    .letter-spacing {
+      letter-spacing: -1px;
+    }
+
+    /*
   text-align 속성 : 요소에 대한 수평 정렬을 지정
   */
-  .text-align-center{
-    text-align: center;
-  }
-  .text-align-right{
-    text-align: right;
-  }
-  .text-align-left{
-    text-align: left;
-  }
-  /*
-  text-decoration 속성 : 
-  */
-  .text-decoration-overline {
+    .text-align-center {
+      text-align: center;
+    }
 
-  }
-  /*
+    .text-align-right {
+      text-align: right;
+    }
+
+    .text-align-left {
+      text-align: left;
+    }
+
+    /*
+  text-decoration 속성 : 텍스트에 underline, overline, line-through 등을 추가
+  */
+    .text-decoration-overline {
+      text-decoration: overline;
+    }
+
+    .text-decoration-line-through {
+      text-decoration: line-through;
+    }
+
+    .text-decoration-underline {
+      text-decoration: underline;
+    }
+
+    .text-decoration-none {
+      text-decoration: none;
+    }
+
+    /*
   white-space 속성 : 
-    - 
-    - 
+    - white space는 띄워쓰기(공백), 들여쓰기(tab), 줄바꿈 (line break)을 의미
+    - white-space 속성은 white space를 제어하기 위한 속성
     - value : line break / space, tab / wrapping (자동 줄바꿈)
-    - normal :  /  / 
-    - nowrap :  /  / 
-    - pre :  /  / 
-    - nowrap :  /  / 
-    - nowrap :  /  / 
+    - normal : 무시 / 1번만 적용 / O (기본값) 
+    - nowrap : 무시 / 1번만 적용 / X
+    - pre : 적용 / 그대로 적용 / X
+    - pre-wrap : 적용 / 그대로 적용 / O
+    - pre-line : 적용 / 1번만 적용 / O
   */
-
-  /*
-  text-overflow 속성 : 
-    - 
-    - 
-    - 
+    .white-space-normal {
+      white-space: normal;
+    }
+    .white-space-nowrap {
+      white-space: nowrap;
+    }
+    .white-space-pre {
+      white-space: pre;
+    }
+    .white-space-pre-wrap {
+      white-space: pre-wrap;
+    }
+    .white-space-pre-line {
+      white-space: pre-line;
+    }
+    /*
+  text-overflow 속성 : 부모 요소의 영역을 벗어난 자동 줄바꿈이 되지 않는 텍스트에 대한 처리 방법
+    - width 속성이 반드시 지정되어 있어야 함
+    - 자동 줄바꿈 방지를 위해 white-space 값을 no-warp으로 지정
+    - overflow 속성에 'visible' 속성이 아닌 값으로 지정되어 있어야 함
   */
-</style>
-
+    .text-box {
+      width: 150px;
+      height: 150px;
+      padding: 10px;
+      margin: 15px;
+      background-color: rgba(0, 0, 0, 0.2);
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .text-overflow-clip {
+      text-overflow: clip;
+    }
+    .text-overflow-ellipsis {
+      text-overflow: ellipsis;
+    }
+  </style>
 </head>
 
 <body>
-
   <h2>line-height</h2>
   <div class="line-height">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
     labore et dolore magna aliqua.</div>
@@ -98,7 +143,7 @@
 
   <hr />
 
-  <h2>text-decoration</h2>
+  <h2>white-space</h2>
 
   <div class="white-space-normal">Lorem ipsum
 
