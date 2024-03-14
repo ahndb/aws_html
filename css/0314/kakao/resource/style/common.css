@@ -14,7 +14,14 @@
   padding: 0px;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  min-width: 1712px;
+}
+
 #wrapper {
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   gap: 60px;
@@ -73,10 +80,34 @@
   width: 56px;
   height: 56px;
   border-radius: 12px;
+  background-size: 100%;
 }
 
 .icon-button:hover {
   cursor: pointer;
+}
+
+.more {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  line-height: 56px;
+  font-size: 36px;
+}
+.more:hover{
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.kakaotalk {
+  background-image: url('https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c9424536018c00001.png');
+}
+
+.daum {
+  background-image: url('https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c9425290018c00001.png');
+}
+
+.story {
+  background-image: url('https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c942653a018c00001.png');
 }
 
 /* More Box */
