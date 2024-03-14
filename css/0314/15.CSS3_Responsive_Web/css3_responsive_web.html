@@ -22,10 +22,25 @@
   <style>
   /*
   @media : 
-    - 
-    - 
-    - 
+    - 서로 다른 미디어 타입이나 조건에 따라서 각각 서로 다른 스타일을 지정
+    - 반응형 웹 디자인의 핵심 기술
+    - 미디어 별로 각기 다른 스타일을 지정하는 것을 Media Query라 함
   */
+  body {
+    background-color: rgba(0, 0, 100, 0.6);
+    color: rgba(255, 255, 255, 1);
+  }
+  @media screen and (max-width:1200px) {
+    body {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+  @media screen and (max-width:800px) {
+    body {
+      background-color: rgba(0, 100, 0, 0.6);
+    }
+  }
   </style>
 
 </head>

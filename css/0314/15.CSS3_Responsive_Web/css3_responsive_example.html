@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=
+  , initial-scale=1.0">
+  <title>Responsive 연습 문제</title>
+  <style>
+    #grid-wrapper {
+      display: grid;
+      grid-template:
+        'header header' 120px
+        'top-navigation top-navigation' 80px
+        'side-navigation main' 800px
+        'footer footer' 200px
+        / 400px 1fr
+      ;
+    }
+
+    #header {
+      background-color: rgba(0, 0, 0, 0.7);
+      grid-area: header;
+    }
+
+    #top-navigation {
+      background-color: rgba(0, 0, 0, 0.2);
+      grid-area: top-navigation;
+    }
+
+    #side-navigation {
+      background-color: rgba(0, 0, 0, 0.3);
+      grid-area: side-navigation;
+    }
+
+    #main {
+      background-color: rgba(0, 0, 0, 0.4);
+      grid-area: main;
+    }
+
+    #footer {
+      background-color: rgba(0, 0, 0, 0.8);
+      grid-area: footer;
+    }
+
+    /* #shrink-sidebar {
+      display: none;
+    } */
+    @media screen and (max-width:800px) {
+      #grid-wrapper {
+      display: grid;
+      grid-template:
+        'header' 120px
+        'top-navigation' 80px
+        'main' 800px
+        'footer' 200px
+        / 1fr
+      ;
+    }
+
+    #side-navigation {
+      display: block;
+      position: fixed;
+      width: 80px;
+      height: 80px;
+      background-color: white;
+      border-radius: 50%;
+      right: 20px;
+      bottom: 20px;
+    }
+
+    /* #shrink-sidebar{
+      display: block;
+      position: fixed;
+      width: 80px;
+      height: 80px;
+      background-color: white;
+      border-radius: 50%;
+      right: 20px;
+      bottom: 20px;
+    } */
+    }
+  </style>
+</head>
+
+<body>
+  <div id="grid-wrapper">
+    <div id="header">Header</div>
+    <div id="top-navigation">Top navigation</div>
+    <div id="side-navigation">Side navigation</div>
+    <div id="main">Main</div>
+    <div id="footer">Footer</div>
+  </div>
+
+  <!-- <div id="shrink-sidebar">Shrink Sidebar</div> -->
+
+</body>
+
+</html>
