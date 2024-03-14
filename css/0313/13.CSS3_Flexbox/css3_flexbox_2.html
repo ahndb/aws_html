@@ -7,41 +7,84 @@
   <title>CSS FlexBox 2</title>
 
   <style>
-  /*
+    /*
     flex item 속성
   */
 
-  .flex-container {
-    display: flex;
-    background-color: rgba(0, 0, 0, 0.4);
-  }
+    .flex-container {
+      display: flex;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
 
-  .flex-item {
-    width: 150px;
-    padding: 25px;
-    text-align: center;
-    border: 1px solid rgba(0, 0, 0, 1);
-  }
+    .flex-item {
+      width: 150px;
+      padding: 25px;
+      text-align: center;
+      border: 1px solid rgba(0, 0, 0, 1);
+    }
 
-  /*
-  order 속성 : 
-    - 
-    - 
+    /*
+  order 속성 : flex item의 배치 순서를 지정
+    - 기본 배치 순서는 flex container에 추가된 순서
+    - HTML 코드를 변경하지 않고 order 속성 값만 변경하여 순서를 지정
   */
+    .flex-order-item-1 {
+      order: 1;
+    }
+
+    .flex-order-item-2 {
+      order: 2;
+    }
+
+    .flex-order-item-3 {
+      order: 3;
+    }
+
+    .flex-order-item-4 {
+      order: 4;
+    }
 
 
-
-  /*
-  flex-grow 속성 : 
-    - 
+    /*
+  flex-grow 속성 : flex item에 대한 너비 확대 비율
+    - 기본값은 0, 음수는 무시됨
   */
+    .flex-grow-item-1 {
+      flex-grow: 1;
+    }
+
+    .flex-grow-item-2 {
+      flex-grow: 0;
+    }
+
+    .flex-grow-item-3 {
+      flex-grow: 0;
+    }
+
+    .flex-grow-item-4 {
+      flex-grow: 0;
+    }
 
 
-
-  /*
-  flex-shrink 속성 : 
-    - 
+    /*
+  flex-shrink 속성 : flex item에 대한 너비 축소 비율
+    - 1이 기본값, 0을 지정하면 원래 너비를 유지, 음수는 무시
   */
+    .flex-shrink-item-1 {
+      flex-shrink: 1;
+    }
+
+    .flex-shrink-item-2 {
+      flex-shrink: 2;
+    }
+
+    .flex-shrink-item-3 {
+      flex-shrink: 3;
+    }
+
+    .flex-shrink-item-4 {
+      flex-shrink: 4;
+    }
   </style>
 
 </head>
