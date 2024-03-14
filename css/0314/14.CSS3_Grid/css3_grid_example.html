@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=
+  , initial-scale=1.0">
+  <title>Grid 연습 문제</title>
+  <style>
+    #grid-wrapper {
+      display: grid;
+      grid-template:
+        'header header' 120px
+        'top-navigation top-navigation' 80px
+        'side-navigation main' 800px
+        'footer footer' 200px
+        / 400px 1fr
+      ;
+      row-gap: 16px;
+    }
+
+    #header {
+      background-color: rgba(0, 0, 0, 0.7);
+      grid-area: header;
+    }
+
+    #top-navigation {
+      background-color: rgba(0, 0, 0, 0.2);
+      grid-area: top-navigation;
+    }
+
+    #side-navigation {
+      background-color: rgba(0, 0, 0, 0.3);
+      grid-area: side-navigation;
+    }
+
+    #main {
+      background-color: rgba(0, 0, 0, 0.4);
+      grid-area: main;
+    }
+
+    #footer {
+      background-color: rgba(0, 0, 0, 0.8);
+      grid-area: footer;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="grid-wrapper">
+    <div id="header"></div>
+    <div id="top-navigation"></div>
+    <div id="side-navigation"></div>
+    <div id="main"></div>
+    <div id="footer"></div>
+</body>
+
+</html>
