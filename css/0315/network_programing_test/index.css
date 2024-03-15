@@ -1,0 +1,158 @@
+@font-face {
+  font-family: 'KakaoRegular';
+  src: url('./KakaoRegular.ttf');
+}
+
+@font-face {
+  font-family: 'KakaoBold';
+  src: url('./KakaoBold.ttf');
+}
+
+* {
+  font-family: 'KakaoRegular',  sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  display: block;
+  min-width: 1712px;
+}
+
+.body1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 100px 0px 0px 0px;
+}
+
+.contents-box {
+  background-color: rgb(243, 243, 243);
+  width: 666px;
+  height: 198px;
+  border-radius: 20px;
+}
+
+.info-box{
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-icon {
+  background-image: url('https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/6562f7bc017800001.png');
+  width: 38px;
+  height: 38px;
+  display: inline-block;
+  content: "";
+  background-size: 100%;
+  margin: 30px 0px 0px 30px;
+}
+
+.cate-box {
+  background-color: white;
+  font-size: 16px;
+  width: 74px;
+  height: 38px;
+  display: inline-block;
+  position: relative;
+  top: -10px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 8px;
+  margin: 0px 0px 0px 10px;
+}
+
+.date-box {
+  display: inline-block;
+  font-size: 16px;
+  position: relative;
+  top: -10px;
+  margin: 30px 0px 0px 8px;
+  width: 78px;
+  height: 38px;
+}
+
+.title-box {
+  font-size: 24px;
+  margin: 25px;
+}
+.title-box:hover {
+  cursor: pointer;
+}
+
+.content-icons-box {
+  width: 24px;
+  height: 24px;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/64/64576.png');
+  display: inline-block;
+  content: "";
+  background-size: 100%;
+  margin: 30px 30px 0px 0px;
+}
+.content-icons-box {
+  cursor: pointer;
+}
+
+/*! 전체뉴스 보도자료 참고자료 */
+.body2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0px 0px 0px;
+}
+
+.link-news {
+  background-color: rgb(243, 243, 243);
+  width: 444px;
+  height: 126px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.link-news:hover {
+  cursor: pointer;
+}
+.link-news:hover .circle {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.title-link{
+  font-size: 26px;
+  line-height: 38px;
+  width: 90px;
+  height: 38px;
+  margin: 0px 0px 0px 16px;
+  padding: 36px 40px;
+  position: relative;
+  top: 10px;
+}
+
+.text-news {
+  width: 91px;
+  height: 38px;
+  font-size: 17px;
+  text-align: center;
+  margin: 50px 0px 0px 16px;
+  position: relative;
+  top: 5px;
+}
+
+.circle {
+  background-color: black;
+  color: white;
+  width: 24px;
+  height: 24px;
+  font-size: 17px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 24px;
+  margin: 50px 50px 0px 0px;
+  position: relative;
+  top: 5px;
+}
+
+.more {
+  display: flex;
+}
