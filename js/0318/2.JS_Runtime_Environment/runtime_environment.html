@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript 실행 환경</title>
+  <!-- 
+    head에 javascript작성
+    - 웹 화면에 출력이 일어나기전에 동작해야하는 작업을 작성
+  -->
+  <script>
+    function buttonClickEvent () {
+      console.log('버튼을 클릭했습니다.');
+      window.open('https://naver.com');
+    }
+  </script>
+  <!--  
+    외부 Javascript 연결
+  -->
+  <script src="./function.js"></script>
+</head>
+<body>
+  <button onclick="buttonClickEvent()">버튼</button>
+  <button onclick="buttonClickEvent2()">버튼2</button>
+  <!--  
+    body 요소 끝에 javascript작성
+    - 화면에 출력된 후 동작해도 되는 작업 작성
+  -->
+</body>
+</html>
