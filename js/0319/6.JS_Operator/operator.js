@@ -124,24 +124,37 @@ if (number > 0) {
   result3 = '영';
 }
 
-let result4 = number < 0 ? '음수' : (number > 0 ? '양수' : '영');
-console.log(result4);
+result3 = number < 0 ? '음수' : number > 0 ? '양수' : '영';
+console.log(result3);
 
 /*
-  논리 연산자 : 
+  논리 연산자 : 우항과 좌항의 피연산자를 논리 연산
   - || : 좌항과 우항 중 하나라도 true면 true, 그렇지 않으면 false
   - && : 좌항과 우항이 모두 true 이면 true, 그렇지 않으면 false
   - ! : 우항을 부정, 우항이 true이면 false, false이면 true
 */
+console.log(true||'홍길동');
+console.log(false ||'홍길동');
+console.log(true && '홍길동');
+console.log(false && '홍길동');
+
+console.log('홍길동'&&true);
+
 
 /*
-  - 
+  - ||연산자와 &&연산자의 결과는 논리 값이 아닐 수 있음
 */
 
 /*
-  쉼표 연산자 : 
+  쉼표 연산자 : 왼쪽 피연산자부터 차례로 피연산자를 연산
 */
-
+let x,y,z;
+console.log(x);
+x = 10, y = 20, z = 30;
+console.log(x);
 /*
-  typeof 연산자 : 
+  typeof 연산자 : 우항의 데이터 및 변수의 타입을 문자열로 반환
 */
+let type = typeof x;
+console.log(type);
+console.log(typeof type);
