@@ -24,3 +24,7 @@ https://mvnrepository.com/
 
 https://start.spring.io/ 
 (프로젝트 설정/ 언어설정/ 버전선택(3.1.9)/ 그룹(팀or회사명)/artifact(프로젝트명)/dependencies 선택하기)
+
+https://developer.mozilla.org/ko/docs/Web/HTTP/Methods
+
+https://learning.postman.com/docs/introduction/overview/

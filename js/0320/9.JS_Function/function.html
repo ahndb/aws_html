@@ -14,20 +14,24 @@
 
   <script>
     const plusButton = document.getElementById("plus-button");
-    plusButton.addEventListener('click', function (){
+    plusButton.addEventListener('click', function () {
       const a = document.getElementById('a');
       const b = document.getElementById('b');
-      document.getElementById('result').innerText = 
-        Number(a.value)+Number(b.value);
+      document.getElementById('result').innerText =
+        Number(a.value) + Number(b.value);
     });
-    
+
+  </script>
+
+  <script>
+    const minusButtonClickEventHandler = function () {
+      const a = document.getElementById('a');
+      const b = document.getElementById('b');
+      document.getElementById('result').innerText =
+        Number(a.value) - Number(b.value);
+    }
     const minusButton = document.getElementById("minus-button");
-    minusButton.addEventListener('click', function (){
-      const a = document.getElementById('a');
-      const b = document.getElementById('b');
-      document.getElementById('result').innerText = 
-        Number(a.value)-Number(b.value);
-    });
+    minusButton.addEventListener('click', minusButtonClickEventHandler);
   </script>
 
 </body>
