@@ -88,10 +88,10 @@
       - 지정된 선택자를 사용하여 요소를 모두 선택
       - NodeList 형태로 반환됨
     */
-const formInputElements = document.querySelectorAll('form > input');
-for (const element of formInputElements) {
-  console.log(element);
-}
+    const formInputElements = document.querySelectorAll('form > input');
+    for (const element of formInputElements) {
+      console.log(element);
+    }
 
 
     console.log('==============================');
@@ -106,8 +106,8 @@ for (const element of formInputElements) {
       - HTMLElement를 상속받은 객체
       - 모든 브라우저에서 동작
     */
-console.log(userIdInputElement.parentNode);
-console.log(userIdInputElement.parentElement);
+    console.log(userIdInputElement.parentNode);
+    console.log(userIdInputElement.parentElement);
 
 
     console.log('==============================');
@@ -117,9 +117,9 @@ console.log(userIdInputElement.parentElement);
       - 자식 요소 선택
       - HTMLElement를 상속받은 객체를 반환
     */
-const signInFromElement = document.getElementById('sign-in-form');
-console.log(signInFromElement.firstElementChild);
-console.log(signInFromElement.lastElementChild);
+    const signInFromElement = document.getElementById('sign-in-form');
+    console.log(signInFromElement.firstElementChild);
+    console.log(signInFromElement.lastElementChild);
 
 
     console.log('==============================');

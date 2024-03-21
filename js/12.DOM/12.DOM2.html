@@ -85,49 +85,54 @@
     */
 
     /*
-    className
-    - 
-    - 
+    id
+    - id 속성의 값을 반환 또는 변경
+    - 모든 브라우저에서 사용
     */
-
-
-
+    const userPwMessageElement = document.getElementById('user-p-message');
+    console.log(userPwMessageElement.id);
+    userPwMessageElement.id = 'user-pw-massage';
+    console.log(userPwMessageElement.id);
     console.log('==============================');
 
     /*
     className
-    - 
-    - 
+    - class 속성의 값을 반환 또는 변경
+    - 모든 브라우저에서 동작
     */
-
-
+    const userIdMassageElement = document.getElementById('user-id-message');
+    console.log(userIdMassageElement.className);
+    userIdMassageElement.className = 'error-message'
 
     console.log('==============================');
-
 
     /*
     hasAttribute(attribute)
-    - 
-    - 
-    - 
-    
+    - 매개변수로 전달한 속성을 가지고 있는지 확인
+    - boolean 값 반환
+    - IE8 이상 동작
+
     getAttribute(attribute)
-    - 
-    - 
-    - 
+    - 속성 값을 반환
+    - string 값으로 반환
+    - 모든 브라우저에서 동작
     
     setAttribute(attribute, value)
-    - 
-    - 
-    - 
+    - 속성과 속성 값을 지정
+    - undefined 반환
+    - 모든 브라우저에서 동작
     
     removeAttribute(attribute)
-    - 
-    - 
-    - 
+    - 지정한 속성을 제거
+    - undefined 반환
+    - 모든 브라우저에서 동작
     */
-
-
+    const userPwInputElement = document.getElementById('user-pw');
+    console.log(userPwInputElement.hasAttribute('type'));
+    console.log(userPwInputElement.getAttribute('type'));
+    userPwInputElement.setAttribute('type', 'date');
+    // 만약 속성을 제거하면 속성의 기본값으로 지정됨
+    userPwInputElement.removeAttribute('type');
 
     console.log('==============================');
 
@@ -137,69 +142,75 @@
 
     /*
     textContent
-    - 
-    - 
-    - 
-    - 
-    - 
+    - 요소의 텍스트 콘텐츠를 반환 또는 변경
+    - 마크업은 무시됨
+    - 요소에 새로운 텍스트를 지정할 때 사용
+    - 마크업 태그를 포함한 문자열이 들어가면 마크업을 순수 문자열로 인식
+    - IE9 이상 동작
     */
-
+    userIdMassageElement.textContent = '잘못된 아이디입니다.';
 
 
     console.log('==============================');
 
     /*
     innerHTML
-    - 
-    - 
+    - 요소에 HTML을 반환 또는 변경
+    - XSS(Cross Site Script) 보안 취약점에 노출됨
     */
-
-
+    const signInFormElement = document.getElementById('sign-in-form');
+    console.log(signInFormElement.innerHTML);
+    // const clientInput = prompt('입력하세요.');
+    // signInFormElement.innerHTML = `<h1>${clientInput}</h1>`;
 
     console.log('==============================');
 
     /*
     createElement(tagName)
-    - 
-    - 
-    - 
+    - 매개변수로 전달한 태그에 해당하는 요소를 생성
+    - HTMLElement 객체 반환
+    - 모든 브라우저에서 동작
     
     createTextNode(text)
-    - 
-    - 
-    - 
+    - 매개변수로 전달한 텍스트를 요소의 텍스트 값으로 지정
+    - Text 객체 반환
+    - 모든 브라우저에서 동작
     
     appendChild(Node)
-    - 
-    - 
-    - 
+    - 매개변수로 전달한 요소를 마지막 자식 요소로 추가
+    - 추가한 요소 HTMLElement 반환
+    - 모든 브라우저에서 동작
     
     removeChild(Node)
-    - 
-    - 
-    - 
+    - 매개변수로 전달한 요소를 자식 요소에서 제거
+    - undefined 반환
+    - 모든 브라우저에서 동작
     */
-
-
+    const signUpButtonElement = document.createElement('button');
+    const signUpButtonText = document.createTextNode('회원가입');
+    signUpButtonElement.appendChild(signUpButtonText);
+    signUpButtonElement.className ='custom-button';
+    const buttonBoxElement = document.getElementById('button-box');
+    buttonBoxElement.appendChild(signUpButtonElement);
 
     console.log('==============================');
 
     /*
     insertAdjacentHTML(position, string)
-    - 
-    - 
-    - 
-    - 
+    - 첫번째 매개변수로 전달한 position 위치에 두번째 매개변수 html을 삽입
+    - 첫번째 매개변수 position('beforebegin','afterbegin','beforeend','afterend')
+    - 두번째 매개변수 html 문자열
+    - 모든 브라우저에서 동작
     */
-
+    buttonBoxElement.insertAdjacentHTML('afterbegin', '<button class="custom-button">회원가입</button>')
 
 
     console.log('==============================');
 
     /*
-    style : 
+    style : inline 스타일 선언 가능
     */
-
+    buttonBoxElement.style.backgroundColor = 'rgba(0,255,0,0.5)'
 
 
   </script>
