@@ -15,138 +15,156 @@
 
   <div id="event-object">이벤트 객체</div>
 
-  <form id="form-parent" action="">
-    <input id="form-input" />
+  <form id="form-parent">
+    <input id="form-input" name="data" />
     <button id="form-button">버튼</button>
   </form>
 
   <script>
 
-  /*
-    이벤트 : 브라우저에 특정한 사건(사용자의 조작)이 발생하는 것
-  */
+    /*
+      이벤트 : 브라우저에 특정한 사건(사용자의 조작)이 발생하는 것
+    */
 
-  /*
-    이벤트의 종류
-  */
+    /*
+      이벤트의 종류
+    */
 
-  /*
-    UI Event
-    - load : 웹 페이지의 로드가 완료됐을 때 (웹 페이지가 열릴 때)
-    - unload : 웹 페이지가 언로드 될 때 (웹 페이지가 닫힐 때)
-    - error : 자바스크립트의 에러가 발생했을 때
-    - resize : 브라우저의 크기가 변경됐을 때
-    - scroll : 페이지의 스크롤이 움직였을 때
-    - select : 텍스트를 선택했을 때
-  */
+    /*
+      UI Event
+      - load : 웹 페이지의 로드가 완료됐을 때 (웹 페이지가 열릴 때)
+      - unload : 웹 페이지가 언로드 될 때 (웹 페이지가 닫힐 때)
+      - error : 자바스크립트의 에러가 발생했을 때
+      - resize : 브라우저의 크기가 변경됐을 때
+      - scroll : 페이지의 스크롤이 움직였을 때
+      - select : 텍스트를 선택했을 때
+    */
 
-  /*
-    Keyboard Event
-    - keydown : 키보드의 키를 누르고 있을 때
-    - keyup : 누르고 있던 키보드의 키를 땟을 띠
-    - keypress : 키를 누르고 땠을 때
-  */
+    /*
+      Keyboard Event
+      - keydown : 키보드의 키를 누르고 있을 때
+      - keyup : 누르고 있던 키보드의 키를 땟을 띠
+      - keypress : 키를 누르고 땠을 때
+    */
 
-  /*
-    Mouse Event
-    - click : 마우스를 클릭 했을 때
-    - dbclick : 마우스를 더블 클릭했을 때
-    - mousedown : 마우스를 누르고 있을 때
-    - mouseup : 누르고 있던 마우스를 뗏을 때
-    - mousemove : 마우스를 움직일 때 (터치 스크린에서 동작 X)
-    - mouseover : 마우스를 요소 위로 올릴 때 (터치 스크린에서 동작 X)
-    - mouseout : 마우스를 요소 밖으로 내보낼 때 (터치 스크린에서 동작 X)
-  */
+    /*
+      Mouse Event
+      - click : 마우스를 클릭 했을 때
+      - dbclick : 마우스를 더블 클릭했을 때
+      - mousedown : 마우스를 누르고 있을 때
+      - mouseup : 누르고 있던 마우스를 뗏을 때
+      - mousemove : 마우스를 움직일 때 (터치 스크린에서 동작 X)
+      - mouseover : 마우스를 요소 위로 올릴 때 (터치 스크린에서 동작 X)
+      - mouseout : 마우스를 요소 밖으로 내보낼 때 (터치 스크린에서 동작 X)
+    */
 
-  /*
-    Focus Event
-    - focus : 요소에 포커스를 얻었을 때
-    - blur : 요소가 포커스를 잃었을 때
-  */
+    /*
+      Focus Event
+      - focus : 요소에 포커스를 얻었을 때
+      - blur : 요소가 포커스를 잃었을 때
+    */
 
-  /*
-    Form Event
-    - input : input 또는 textarea 요소의 값이 변경됐을 때
-    - change : select, check box, radio button의 상태가 변경됐을 때
-    - submit : form의 submit 버튼을 눌렀을 때
-    - reset : form의 reset 버튼을 눌렀을 때
-  */
+    /*
+      Form Event
+      - input : input 또는 textarea 요소의 값이 변경됐을 때
+      - change : select, check box, radio button의 상태가 변경됐을 때
+      - submit : form의 submit 버튼을 눌렀을 때
+      - reset : form의 reset 버튼을 눌렀을 때
+    */
 
-  /*
-    Clipboard Event
-    - cut : 컨텐츠를 잘라내기 했을 때
-    - copy : 컨테츠를 복사 했을 때
-    - paste : 컨텐츠를 붙여넣기 했을 때
-  */
+    /*
+      Clipboard Event
+      - cut : 컨텐츠를 잘라내기 했을 때
+      - copy : 컨테츠를 복사 했을 때
+      - paste : 컨텐츠를 붙여넣기 했을 때
+    */
 
-  /*
-    이벤트 핸들러 등록
-  */
+    /*
+      이벤트 핸들러 등록
+    */
 
-  /*
-    인라인 이벤트 핸들러 방식
-    - 요소의 onEvent 속성에 이벤트 핸들러를 등록하는 방법
-  */
-  function onButtonClickHandler() {
-    alert('인라인 이벤트 핸들러 방식');
-  }
-
-
-  console.log('==============================');
-
-  /*
-    이벤트 핸들러 속성 방식
-    - 
-  */
+    /*
+      인라인 이벤트 핸들러 방식
+      - 요소의 onEvent 속성에 이벤트 핸들러를 등록하는 방법
+      - 코드를 분석하기 어려워 유지보수에 어려움
+    */
+    function onButtonClickHandler() {
+      alert('인라인 이벤트 핸들러 방식');
+    }
 
 
+    console.log('==============================');
 
-  console.log('==============================');
+    /*
+      이벤트 핸들러 속성 방식
+      - document element의 onEvent 속성으로 등록하는 방법
+    */
+    const eventHandlerProppButtonElement = document.getElementById('event-handler-prop');
+    eventHandlerProppButtonElement.onclick = function () {
+      alert('이벤트 핸들러 속성 방식')
+    }
 
-  /*
-    addEventListener 메소드 방식
-    - 
-    - 
-  */
+    console.log('==============================');
+
+    /*
+      addEventListener 메소드 방식
+      - addEventListener 메소드를 이용해서 대상 요소에 이벤트를 등록하는 방식
+      - 등록한 이벤트가 발생할 때 같이 전달한 콜백 함수를 실행
+    */
+    const eventListenerButtonElement = document.getElementById('event-listener');
+    eventListenerButtonElement.addEventListener('click', function () {
+      alert('이벤트 리스너 등록 메소드 방식')
+    });
+
+    console.log('==============================');
+
+    /*
+      이벤트 객체 : 
+      - 이벤트를 발생시킨 요소와 발생한 이벤트의 정보를 가지고 있는 객체
+      - 이벤트가 발생하면 이벤트 객체는 자동으로 생성되며 이벤트를 처리하는 핸들러 함수에 매개변수로 전달됨
+    */
+    const eventObjectElement = document.getElementById('event-object');
+    eventObjectElement.addEventListener('click', function (event) {
+      console.log(event);
+    });
 
 
+    console.log('==============================');
 
-  console.log('==============================');
+    /*
+      Event 속성
+    */
 
-  /*
-    이벤트 객체 : 
-    - 
-    - 
-  */
+    /*
+      target : 실제로 이벤트를 발생시킨 요소
+      currentTarget : 이벤트가 등록된 요소
+      type : 이벤트의 종류
+      cancelable : 기본 동작에 대한 취소 여부
+    */
+    const formParentElement = document.getElementById('form-parent');
+    formParentElement.addEventListener('click', function (event) {
+      console.log('target :' + event.target.id);
+      console.log('currentTarget :' + event.currentTarget.id);
+      console.log('type :' + event.type);
+      console.log('cancelable :' + event.cancelable);
+    });
 
+    console.log('==============================');
 
+    /*
+      기본 동작 변경
+    */
 
-  console.log('==============================');
-
-  /*
-    Event 속성
-  */
-
-  /*
-    target : 
-    currentTarget : 
-    type : 
-    cancelable : 
-  */
-
-
-
-  console.log('==============================');
-
-  /*
-    기본 동작 변경
-  */
-
-  /*
-    preventDefault() : 
-    stopPropagation() : 
-  */
-
+    /*
+      preventDefault() : 요소가 기본적으로 가지고 있는 동작을 중단
+      stopPropagation() : 요소에서 이벤트를 처리한 후 이벤트가 부모 요소로 전파되는 것을 중단
+    */
+    const formButtonElement = document.getElementById('form-button');
+    formButtonElement.addEventListener('click', function(event) {
+      event.preventDefault();
+      console.log('submit 버튼 클릭!');
+      event.stopPropagation();
+    });
 
 
   </script>
