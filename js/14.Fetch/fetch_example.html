@@ -10,6 +10,7 @@
     <span>이름 : </span><input type="text" id="name" />
     <span>나이 : </span><input type="number" id="age" />
     <button type="button" id="submit" onclick="onSubmitHandler()">전송</button>
+    <button type="button" id="post--submit" onclick="onPostSubmitHandler()">전송</button>
   </div>
   <script>
     const onSubmitHandler = function (event) {
@@ -22,10 +23,30 @@
       fetch(`http://localhost:4000/request-data/path-variable/${age}/${name}`, {
         method: 'DELETE'
       })
-        .than(function (response) {
-          console.log(response);
+        .then(function (response) {
+          response.text().then(function (result) {
+            console.log(result);
+          });
         });
     }
+
+    const onPostSubmitHandler = function (event) {
+      fetch('http://localhost:4000/request-data/post', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({})
+      })
+        .then(function (response) {
+          response.text().then(function (result) {
+            console.log(result);
+          });
+        })
+        .catch(function (error) {
+          console.log(error);
+        })
+    };
   </script>
 </body>
 </html>
