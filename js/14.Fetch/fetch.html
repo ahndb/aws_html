@@ -11,44 +11,87 @@
 
   <script>
 
-  /*
-    JSON: 
-    - 
-    - 
-    - 
-  */
+    /*
+      JSON: JavaScript Object Notation
+      - 클라이언트와 서버 간 데이터 교환을 위한 문자열 포멧
+      - XML 포멧보다 가볍고 사용성이 좋음
+      - 자바스크립트의 객체 리터럴과 비슷하게ㅔ 생겼지만, JSON은 순수 텍스트
+    */
 
-  /*
-    JSON.stringify : javascript 객체를 JSON 형식의 문자열로 변환
-  */
+    /*
+      JSON.stringify : javascript 객체를 JSON 형식의 문자열로 변환
+    */
+    const object = {
+      name: '이방원',
+      age: 56
+    };
+    console.log(typeof object, object);
 
+    const jsonObject = JSON.stringify(object);
+    console.log(typeof jsonObject, jsonObject);
 
+    console.log('==============================');
 
-  console.log('==============================');
+    /*
+      JSON.parse : JSON 포멧의 문자열 데이터를 자바스크립트 객체로 변경
+    */
+    const stringJson = '{ "name": "이도", "age": 54 }';
+    console.log(typeof stringJson, stringJson);
 
-  /*
-    JSON.parse : 
-  */
+    console.log('==============================');
+    
+    const object2 = JSON.parse(stringJson);
+    console.log(typeof object2, object2);
+    /*
+      Fetch API
+      - HTTP 요청과 응답을 javascript에서 접근하고 조작할 수 있는 인터페이스
+      - 비동기 함수
+      - fetch(url, options)
+      - fetch(url, options).then(callback).catch(callback)
+    */
 
+    /*
+      Request
+    */
 
+    // fetch 함수는 기본적으로 GET 요청
+    fetch('http://localhost:5500')
 
-  console.log('==============================');
+    // 특정 메서드로 요청을 보내거나 요청에 대한 옵션을 변경하려면
+    // 두번째 options 메서드로 옵션 객체를 전달
+    fetch('http://localhost:5500', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: stringJson
+    })
 
-  /*
-    Fetch API
-    - 
-    - 
-    - 
-    - 
-  */
+    // QueryString 으로 데이터를 전송하는 방법
+    const queryString = new URLSearchParams(object2).toString;
+    fetch('http://localhost:5500?' + queryString)
 
-  /*
-    Request
-  */
+    // URL Pattern으로 데이터를 전송하는 방법
+    const name = 'gildong';
+    fetch(`http://localhost:5500/${name}`);
 
+    const response = fetch('http://localhost:5500');
+    console.log(response);
 
+    fetch('http://localhost:5500').then(function(response){
+      console.log(response);
+    });
 
-  console.log('==============================');
+    async function getLocalhost () {
+      console.log('함수시작');
+      const response = await fetch('http://localhost:5500');
+      console.log(response);
+      console.log('함수종료');
+      
+    };
+    getLocalhost();
+
+    console.log('==============================');
 
   </script>
 
