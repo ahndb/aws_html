@@ -137,8 +137,9 @@
 
 .sign-in-sns-container {
   display: flex;
-  width: 100%;
-  background-color: brown;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
 }
 
 .image-button {
