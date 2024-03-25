@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 @font-face {
   font-family: 'Pretendard';
   src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
@@ -7,15 +9,42 @@
 
 * {
   margin: 0px;
+  font-family: Pretendard;
 }
 
 .h1 {
-  font-family: Pretendard;
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
   line-height: 173%;
+}
 
+.label {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.input {
+  flex-grow: 1;
+  border: 1px solid rgba(238, 238, 238, 1);
+  border-radius: 6px;
+  outline: none;
+  padding: 8px 16px;
+
+  background-color: rgba(255, 255, 255, 1);
+
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 175%;
+  color: rgba(35, 45, 66, 1);
+}
+
+.input::placeholder {
+  color: rgba(125, 146, 166, 1);
 }
 
 #sign-in-wrapper {
@@ -37,13 +66,11 @@
   align-items: center;
   flex-grow: 1;
   min-width: 610px;
-  background-color: aqua;
 }
 
 .sign-in-container {
   width: 380px;
   height: 523px;
-  background-color: rgb(144, 144, 44);
 
 }
 
@@ -52,14 +79,7 @@
   flex-direction: column;
   align-items: center;
   gap: 24px;
-  background-color: blanchedalmond;
   color: rgba(64, 64, 64, 1);
-}
-
-
-.sign-in-contents {
-  background-color: aquamarine;
-  gap: 24px;
 }
 
 .sign-in-contents {
@@ -67,45 +87,64 @@
   flex-direction: column;
   align-items: center;
   gap: 24px;
-  background-color: red;
+  width: 100%;
 }
 
 .sign-in-input-container {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  background-color: violet;
+  width: 100%;
 }
 
 .input-box {
-  background-color: greenyellow;
   width: 100%;
 }
 
 .input-label {
-  background-color: green;
+  color: rgba(138, 146, 166, 1);
 }
 
 .input-content-box {
-  background-color: gray;
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+  margin-bottom: 4px;
 }
+
 
 .input-message {
-  background-color: salmon;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
+.primary {
+  color: rgba(58, 87, 232, 1);
+}
 
+.error {
+  color: rgba(255, 84, 62, 1);
+}
+
+.short-divider {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 8px 16px;
+}
+
+.sign-in-sns-container {
+  display: flex;
+  width: 100%;
+  background-color: brown;
+}
 
 .image-button {
   width: 56px;
   height: 56px;
   border-radius: 56px;
-}
-
-.sign-in-sns-container {
-  display: flex;
-  align-items: center;
-  
 }
 
 #kakao-button {
