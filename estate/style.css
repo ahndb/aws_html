@@ -1,5 +1,21 @@
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
 * {
   margin: 0px;
+}
+
+.h1 {
+  font-family: Pretendard;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 173%;
+
 }
 
 #sign-in-wrapper {
@@ -16,6 +32,9 @@
 }
 
 .sign-in-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-grow: 1;
   min-width: 610px;
   background-color: aqua;
@@ -24,12 +43,58 @@
 .sign-in-container {
   width: 380px;
   height: 523px;
-  background-color: beige;
+  background-color: rgb(144, 144, 44);
+
 }
 
-/* #submit-button {
-  display: block;
-} */
+.sign-in-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  background-color: blanchedalmond;
+  color: rgba(64, 64, 64, 1);
+}
+
+
+.sign-in-contents {
+  background-color: aquamarine;
+  gap: 24px;
+}
+
+.sign-in-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  background-color: red;
+}
+
+.sign-in-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background-color: violet;
+}
+
+.input-box {
+  background-color: greenyellow;
+  width: 100%;
+}
+
+.input-label {
+  background-color: green;
+}
+
+.input-content-box {
+  background-color: gray;
+}
+
+.input-message {
+  background-color: salmon;
+}
+
+
 
 .image-button {
   width: 56px;
@@ -37,8 +102,10 @@
   border-radius: 56px;
 }
 
-.full-button {
+.sign-in-sns-container {
   display: flex;
+  align-items: center;
+  
 }
 
 #kakao-button {
