@@ -1,0 +1,52 @@
+* {
+  margin: 0px;
+}
+
+#sign-in-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  min-height: 1024px;
+}
+
+.sign-in-image-box {
+  min-width: 830px;
+  background-image: url(./resource/image/sign-in-background.png);
+  background-size: cover;
+}
+
+.sign-in-box {
+  flex-grow: 1;
+  min-width: 610px;
+  background-color: aqua;
+}
+
+.sign-in-container {
+  width: 380px;
+  height: 523px;
+  background-color: beige;
+}
+
+/* #submit-button {
+  display: block;
+} */
+
+.image-button {
+  width: 56px;
+  height: 56px;
+  border-radius: 56px;
+}
+
+.full-button {
+  display: flex;
+}
+
+#kakao-button {
+  background-image: url(./resource/image/kakao-button.png);
+  background-repeat: no-repeat;
+}
+
+#naver-button {
+  background-image: url(./resource/image/naver-button.png);
+  background-repeat: no-repeat;
+}

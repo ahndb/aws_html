@@ -7,31 +7,28 @@
   <title>임대 주택 가격 서비스</title>
 </head>
 <body>
-  <div>전체
-    <div>왼쪽전체
-      <div>이미지</div>
-    </div>
-    <div>오른쪽전체
-      <div>임대주택가격서비스</div>
-      <div>아이디비밀번호</div>
-      <div>로그인회원가입
-        <form action="">
-          <fieldset>
-            <legend>
-              <input type="text" name="" id="">
-            </legend>
-          </fieldset>
-          <fieldset>
-            <legend>
-              <input type="password" name="" id="">
-            </legend>
-          </fieldset>
-          <button type="submit">로그인</button>
-          <button type="submit">회원가입</button>
+  <div id="sign-in-wrapper">
+    <div class="sign-in-image-box"></div>
+    <div class="sign-in-box">
+      <div class="sign-in-container">임대주택가격서비스
+        <div>아이디비밀번호</div>
+        <div>로그인회원가입
+          <form action="">
+            <div>아이디</div>
+            <input type="text" name="" id="">
+            <div>비밀번호</div>
+            <input type="password" name="" id="">
+            <div id="submit-button">
+              <button type="submit">로그인</button>
+              <button type="submit">회원가입</button>
+            </div>
         </div>
-        <div>카카오버튼이미지</div>
-        <div>네이버버튼이미지</div>
-      </form>
+        <div class="full-button">
+          <div id="kakao-button" class="image-button">카카오버튼이미지</div>
+          <div id="naver-button" class="image-button">네이버버튼이미지</div>
+        </div>
+        </form>
+      </div>
     </div>
   </div>
   <script src="./script.js"></script>
