@@ -1,5 +1,6 @@
 //! spring init
 //*   ->  application.properties(server.port 변경) #8080 -> 4000
+//?         --> src/main/resources (위치)
 //*   ->  controller 생성 (@RestController, @RequestMapping)
 //*   ->  각 HTTP 요청에 따른 method 생성 (@Get, Post, Put, Patch, DeleteMapping)
 //?         --> 브라우저의 스크립트로 요청이 넘어왔을 때 같은 출처가 아니라면 CORS 정책으로 막힘
