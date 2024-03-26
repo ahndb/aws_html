@@ -5,11 +5,12 @@ function onSignInButtonClickHandler(event) {
   const id = document.getElementById("id").value;
   const password = document.getElementById("password").value;
 
+  const signInMessageElement = document.getElementById("sign-in-message");
   if (id === ID && password === PASSWORD) {
     alert("로그인 성공!");
     signInMessageElement.textContent = "";
   } else {
-    const signInMessageElement = document.getElementById("sign-in-message");
+    
     signInMessageElement.textContent = "로그인 정보가 일치하지 않습니다.";
   }
 }
