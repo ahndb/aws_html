@@ -17,28 +17,28 @@
                         <div class="input-box">
                             <div class="input-label label">아이디</div>
                             <div class="input-content-box">
-                                <input class="input" type="text" placeholder="아이디를 입력해주세요." />
+                                <input id="id" class="input" type="text" placeholder="아이디를 입력해주세요." />
                             </div>
                             <div class="input-message"></div>
                         </div>
                         <div class="input-box">
                             <div class="input-label label">비밀번호</div>
                             <div class="input-content-box">
-                                <input class="input" type="password" placeholder="비밀번호를 입력해주세요." />
+                                <input id="password" class="input" type="password" placeholder="비밀번호를 입력해주세요." />
                             </div>
-                            <div class="input-message error">로그인 정보가 일치하지 않습니다.</div>
+                            <div id="sign-in-message" class="input-message error"></div>
                         </div>
                     </div>
                     <div class="sign-in-button-container">
-                        <div class="primary-button full-width">로그인</div>
-                        <div class="text-link full-width">회원가입</div>
+                        <div class="primary-button full-width" onclick="onSignInButtonClickHandler()">로그인</div>
+                        <div class="text-link full-width" id="sign-up-link">회원가입</div>
                     </div>
                     <div class="short-divider"></div>
                     <div class="sign-in-sns-container">
                         <div class="sns-container-title label">SNS 로그인</div>
                         <div class="sns-button-container">
-                            <div class="sns-button kakao-button"></div>
-                            <div class="sns-button naver-button"></div>
+                            <div class="sns-button kakao-button" onclick="kakao()"></div>
+                            <div id="naver" class="sns-button naver-button"></div>
                         </div>
                     </div>
                 </div>
