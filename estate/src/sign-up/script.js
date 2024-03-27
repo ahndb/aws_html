@@ -3,6 +3,16 @@ const PASSWORD = "P!ssw0rd";
 const EMAIL = "email@email.com";
 const AUTH_NUMBER = "1010";
 
+let id = "",
+  password = "",
+  passwordCheck = "",
+  email = "",
+  authNumber = "";
+let isDuplicate = false,
+  isEmail = false,
+  isDuplicateEmail = false,
+  isCheckAuthNumber = false;
+
 const idInputElement = document.getElementById("id");
 const emailInputElement = document.getElementById("email");
 const authInputElement = document.getElementById("auth-number");
@@ -23,57 +33,63 @@ const passwordCheckMessageElement = document.getElementById(
 const emailMessageElement = document.getElementById("email-message");
 const authNumberMessageElement = document.getElementById("auth-number-message");
 
-const signInLinkElement = document.getElementById('sign-in-link');
+const signUpButtonElement = document.getElementById("sign-up-button");
+const signInLinkElement = document.getElementById("sign-in-link");
 
 function onIdInputHandler(event) {
-  const value = event.target.value;
+  id = event.target.value;
 
   if (value) checkDuplicateButtonElement.className = "input-primary-button";
   else checkDuplicateButtonElement.className = "input-disable-button";
 }
 
 function onEmailInputHandler(event) {
-  const value = event.target.value;
+  email = event.target.value;
 
   if (value) checkEmailButtonElement.className = "input-primary-button";
   else checkEmailButtonElement.className = "input-disable-button";
 }
 
 function onAuthInputHandler(event) {
-  const value = event.target.value;
+  authNumber = event.target.value;
 
   if (value) checkAuthNumberButtonElement.className = "input-primary-button";
   else checkAuthNumberButtonElement.className = "input-disable-button";
 }
 
-idInputElement.addEventListener("input", onIdInputHandler);
-emailInputElement.addEventListener("input", onEmailInputHandler);
-authInputElement.addEventListener("input", onAuthInputHandler);
+idInputElement.addEventListener("input", function(event)) {
+  onIdInputHandler(event)
+  setSignUpButton();
+}
+
+emailInputElement.addEventListener("input", function(event)) {
+  onEmailInputHandler(event);
+  setSignUpButton();
+} 
+
+authInputElement.addEventListener("input", function(event)) {
+  onAuthInputHandler(event);
+  setSignUpButton();
+}
+
 
 function onCheckDuplicateClickHandler(event) {
-  const idValue = idInputElement.value;
-  if (!idValue) return; // 값이 없을 때 눌러지지 않게 함
-  const isDuplicate = idValue === ID;
+  if (!id) return; // 값이 없을 때 눌러지지 않게 함
 
+  isDuplicate = id === ID;
   if (isDuplicate) {
     idMessageElement.className = "input-message error";
     idMessageElement.textContent = "이미 사용중인 아이디 입니다.";
-  } else {
-    idMessageElement.className = "input-message primary";
-    idMessageElement.textContent = "사용 가능한 아이디 입니다.";
+    return;
   }
+  idMessageElement.className = "input-message primary";
+  idMessageElement.textContent = "사용 가능한 아이디 입니다.";
 }
 
-checkDuplicateButtonElement.addEventListener(
-  "click",
-  onCheckDuplicateClickHandler
-);
-
 function onCheckEmailClickHandler(event) {
-  const emailValue = emailInputElement.value;
-  if (!emailValue) return;
+  if (!email) return;
   const emailReg = /^[a-zA-Z0-9._-]*@([-.]?[a-zA-Z0-9])*\.[a-zA-Z]{2,4}$/;
-  const isEmail = emailReg.test(emailValue);
+  const isEmail = emailReg.test(email);
 
   if (!isEmail) {
     emailMessageElement.className = "input-message error";
@@ -81,7 +97,7 @@ function onCheckEmailClickHandler(event) {
     return;
   }
 
-
+  isDuplicateEmail = email === EMAIL;
   if (isDuplicateEmail) {
     emailMessageElement.className = "input-message error";
     emailMessageElement.textContent = "이미 사용중인 이메일 입니다.";
@@ -90,31 +106,57 @@ function onCheckEmailClickHandler(event) {
   emailMessageElement.className = "input-message primary";
   emailMessageElement.textContent = "인증번호가 전송되었습니다.";
 }
-checkEmailButtonElement.addEventListener("click", onCheckEmailClickHandler);
-
-
-const isCheckAuthNumber = authNumberValue === AUTH_NUMBER;
+checkEmailButtonElement.addEventListener("click", function (event)){
+  onCheckEmailClickHandler(event);
+  setSignUpButton();
+}
 
 function onCheckAuthNumberClickHandler(event) {
-  const authNumberValue = authInputElement.value;
-  if (!authNumberValue) return;
-
+  if (!authNumber) return;
+  const isCheckAuthNumber = authNumber === AUTH_NUMBER;
 
   if (isCheckAuthNumber) {
     authNumberMessageElement.className = "input-message primary";
     authNumberMessageElement.textContent = "인증번호가 확인되었습니다";
-  } else {
-    authNumberMessageElement.className = "input-message error";
-    authNumberMessageElement.textContent = "인증번호가 일치하지 않습니다.";
+    return;
   }
+  authNumberMessageElement.className = "input-message error";
+  authNumberMessageElement.textContent = "인증번호가 일치하지 않습니다.";
 }
 
-checkAuthNumberButtonElement.addEventListener("click", onCheckAuthNumberClickHandler);
+checkAuthNumberButtonElement.addEventListener(
+  "click", function(event)) {
+    onCheckAuthNumberClickHandler(event)
+    setSignUpButton();
+  }
 
 function onSignInLinkClickHandler(event) {
-  window.location.href = '../sign-in';
+  window.location.href = "../sign-in";
 }
 
-signInLinkElement.addEventListener('click', onSignInLinkClickHandler);
+signInLinkElement.addEventListener("click", function(event)) {
+  onSignInLinkClickHandler(event);
+  setSignUpButton();
+} 
 
+function setSignUpButton() {
+  const isPrimaryButton =
+    id &&
+    password &&
+    passwordCheck &&
+    email &&
+    authNumber &&
+    !isDuplicate &&
+    isEmail &&
+    !isDuplicateEmail &&
+    isCheckAuthNumber;
 
+  if (isPrimaryButton)
+    signUpButtonElement.className = "primary-button full-width";
+  else signUpButtonElement.className = "disable-button full-width";
+}
+
+function onSignUpButtonHandler(event, handler) {
+  handler (event);
+  setSignUpButton();
+}
