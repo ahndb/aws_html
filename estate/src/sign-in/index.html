@@ -31,15 +31,15 @@
                         </div>
                     </div>
                     <div class="sign-in-button-container">
-                        <div class="primary-button full-width" onclick="onSignInButtonClickHandler()">로그인</div>
-                        <div class="text-link full-width" id="sign-up-link">회원가입</div>
+                        <div class="primary-button full-width" onclick="onSignInButtonClickHandler();">로그인</div>
+                        <div id='sign-up-link' class="text-link">회원가입</div>
                     </div>
                     <div class="short-divider"></div>
                     <div class="sign-in-sns-container">
                         <div class="sns-container-title label">SNS 로그인</div>
                         <div class="sns-button-container">
-                            <div class="sns-button kakao-button" onclick="kakao()"></div>
-                            <div id="naver" class="sns-button naver-button"></div>
+                            <div id="kakao-button" class="sns-button kakao-button"></div>
+                            <div id="naver-button" class="sns-button naver-button"></div>
                         </div>
                     </div>
                 </div>
@@ -47,5 +47,6 @@
         </div>
     </div>
     <script src="./script.js"></script>
+    <script src="../common.js"></script>
 </body>
 </html>
