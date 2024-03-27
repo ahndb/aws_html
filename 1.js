@@ -61,15 +61,7 @@ idInputElement.addEventListener('input', function (event) {
     setSignUpButton();
 });
 
-passwordInputElement.addEventListener('input', function (event) {
-    onPasswordInputHandler(event);
-    setSignUpButton();
-});
 
-passwordCheckInputElement.addEventListener('input', function (event) {
-    onPasswordCheckInputHandler(event);
-    setSignUpButton();
-});
 
 emailInputElement.addEventListener('input', function (event) {
     onEmailInputHandler(event);
@@ -136,14 +128,7 @@ checkDuplicateButtonElement.addEventListener('click', function (event) {
     onCheckDuplicateClickHandler(event);
     setSignUpButton();
 });
-checkEmailButtonElement.addEventListener('click', function (event) {
-    onCheckEmailClickHandler(event);
-    setSignUpButton();
-});
-checkAuthNumberButtonElement.addEventListener('click', function (event) {
-    onCheckAuthNumberClickHandler(event);
-    setSignUpButton();
-});
+
 
 function onSignInLinkClickHandler (event) {
     window.location.href = '../sign-in';
