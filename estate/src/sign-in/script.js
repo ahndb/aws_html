@@ -20,4 +20,3 @@ function onSignUpLinkClickHandler(event) {
 
 const signUpLinkElement = document.getElementById('sign-up-link');
 signUpLinkElement.addEventListener('click', onSignUpLinkClickHandler);
-
