@@ -23,6 +23,8 @@ const passwordCheckMessageElement = document.getElementById(
 const emailMessageElement = document.getElementById("email-message");
 const authNumberMessageElement = document.getElementById("auth-number-message");
 
+const signInLinkElement = document.getElementById('sign-in-link');
+
 function onIdInputHandler(event) {
   const value = event.target.value;
 
@@ -69,7 +71,8 @@ checkDuplicateButtonElement.addEventListener(
 
 function onCheckEmailClickHandler(event) {
   const emailValue = emailInputElement.value;
-  const emailReg = /^[a-zA-Z0-9._-]*@[a-zA-Z0-9]*\.[a-zA-Z]{2,4}$/;
+  if (!emailValue) return;
+  const emailReg = /^[a-zA-Z0-9._-]*@([-.]?[a-zA-Z0-9])*\.[a-zA-Z]{2,4}$/;
   const isEmail = emailReg.test(emailValue);
 
   if (!isEmail) {
@@ -78,13 +81,40 @@ function onCheckEmailClickHandler(event) {
     return;
   }
 
-  const isDuplicateEmail = emailValue === EMAIL;
+
   if (isDuplicateEmail) {
     emailMessageElement.className = "input-message error";
     emailMessageElement.textContent = "이미 사용중인 이메일 입니다.";
-    return;
+    return; // 다시 실행을 하지 않기 위해 return 입력, else 입력시 return 불필요
   }
   emailMessageElement.className = "input-message primary";
   emailMessageElement.textContent = "인증번호가 전송되었습니다.";
 }
 checkEmailButtonElement.addEventListener("click", onCheckEmailClickHandler);
+
+
+const isCheckAuthNumber = authNumberValue === AUTH_NUMBER;
+
+function onCheckAuthNumberClickHandler(event) {
+  const authNumberValue = authInputElement.value;
+  if (!authNumberValue) return;
+
+
+  if (isCheckAuthNumber) {
+    authNumberMessageElement.className = "input-message primary";
+    authNumberMessageElement.textContent = "인증번호가 확인되었습니다";
+  } else {
+    authNumberMessageElement.className = "input-message error";
+    authNumberMessageElement.textContent = "인증번호가 일치하지 않습니다.";
+  }
+}
+
+checkAuthNumberButtonElement.addEventListener("click", onCheckAuthNumberClickHandler);
+
+function onSignInLinkClickHandler(event) {
+  window.location.href = '../sign-in';
+}
+
+signInLinkElement.addEventListener('click', onSignInLinkClickHandler);
+
+
