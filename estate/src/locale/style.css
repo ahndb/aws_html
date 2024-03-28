@@ -7,11 +7,7 @@
     / 257px minmax(1182px, 1fr);
 }
 
-
-
 .logo-container {
-  background-color: #fff123;
-
   grid-area: logo;
 
   display: flex;
@@ -29,8 +25,6 @@
 }
 
 .top-bar-container {
-  background-color: #ff5552;
-
   grid-area: topbar;
 
   display: flex;
@@ -44,14 +38,73 @@
 
 }
 
-.side-navigation-container {
-  background-color: #3cbb54;
+.top-bar-title {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 
+  color: rgba(64, 64, 64, 1);
+}
+
+.side-navigation-container {
   grid-area: sidenav;
+  padding: 16px 12px;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.side-navigation-item {
+  border-radius: 6px;
+  padding: 8 24px;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  color: rgba(138, 146, 166, 1);
+}
+
+.side-navigation-item:hover {
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+.side-navigation-item.active {
+  background-color: rgba(58, 87, 232, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.side-navigation-icon {
+  width: 24px;
+  height: 24px;
+  background-size: 100% 100%;
+}
+
+.side-navigation-icon.chart {
+  background-image: url(../../resource/image/chart-icon.png);
+}
+
+.side-navigation-icon.pie {
+  background-image: url(../../resource/image/pie-icon.png);
+}
+
+.side-navigation-icon.edit {
+  background-image: url(../../resource/image/edit-icon.png);
+}
+
+.side-navigation-title {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .main-container {
-  background-color: #7270de;
-
   grid-area: main;
+  padding: 24px;
+  background-color: rgba(238, 238, 238, 0.5);
+
 }
