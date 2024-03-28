@@ -1,0 +1,57 @@
+ /* css에서 연산이 가능하게 해주는 calc() */
+#wrapper {
+  display: grid;
+  grid-template: 
+    'logo topbar' 77px
+    'sidenav main' minmax(867px, auto)
+    / 257px minmax(1182px, 1fr);
+}
+
+
+
+.logo-container {
+  background-color: #fff123;
+
+  grid-area: logo;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  border-bottom: 1px solid rgba(233, 236, 239, 1);
+
+  font-size: 24px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 173%;
+  color: rgba(64, 64, 64, 1);
+  
+}
+
+.top-bar-container {
+  background-color: #ff5552;
+
+  grid-area: topbar;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 24px;
+
+  border-left: 1px solid rgba(233, 236, 239, 1);
+  border-bottom: 1px solid rgba(233, 236, 239, 1);
+
+}
+
+.side-navigation-container {
+  background-color: #3cbb54;
+
+  grid-area: sidenav;
+}
+
+.main-container {
+  background-color: #7270de;
+
+  grid-area: main;
+}
