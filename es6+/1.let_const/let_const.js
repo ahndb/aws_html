@@ -8,10 +8,11 @@
 console.log(funcLevel);
 
 // 다른 블럭에 선언된 변수는 사용 할 수 없음
-// {
-//   let blockLevel = 10;
-// }
-// console.log(blockLevel); 
+// 선언하고 초기화를 하기전에는 사용이 불가능
+{
+  let blockLevel = 10;
+}
+console.log(blockLevel); 
 
 /*
   let
