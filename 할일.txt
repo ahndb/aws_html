@@ -1,5 +1,0 @@
-<!-- https://nodejs.org/en/download
-node.js 설치 안정화버전
-
-https://www.postman.com/downloads/ 
-포스트맨 다운
