@@ -18,8 +18,6 @@ https://www.webdesignrankings.com/resources/lolcolors/
 
 https://fonts.google.com/?subset=korean&noto.script=Kore
 
-https://noonnu.cc/
-
 https://mvnrepository.com/
 
 https://start.spring.io/ 
