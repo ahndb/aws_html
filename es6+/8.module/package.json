@@ -1,0 +1,12 @@
+{
+  "name": "8.module",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "module2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
