@@ -9,20 +9,20 @@ interface Person<T> {
 }
 
 const person: Person<string> = {
-  name: '홍길동',
-  data: '김철수'
-}
+  name: "홍길동",
+  data: "김철수",
+};
 
 person.data;
 
 const func = <T>(name: string, data: T) => {
-  const result: Person<T> = { name, data }
+  const result: Person<T> = { name, data };
   return result;
-}
+};
 
-const person1 = func('김철수', '홍길동');
-const person2 = func('이영희', 20);
+const person1 = func("김철수", "홍길동");
+const person2 = func("이영희", 20);
 
-person2.data
+person2.data;
 
 console.log("==================================================");

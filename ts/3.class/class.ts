@@ -22,7 +22,7 @@ console.log("==================================================");
 class Sample2 {
   private privateField: string;
   protected protectedField: string;
-  public publicField: string;
+  publicField: string;
 
   constructor() {
     this.privateField = "프라이빗 필드";

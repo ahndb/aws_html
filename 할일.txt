@@ -1,1 +1,34 @@
 타입스크립트 설치
+
+```bash
+npm install -g typescript
+tsc -v
+```
+
+```bash
+tsc typescript.ts
+node typescript.js
+```
+
+```bash
+tsc --init
+```
+
+```bash
+npm install -g ts-node
+```
+
+===============================================
+리액트 설치
+npx create-react-app 프로젝트이름 --template typescript
+
+cd 프로젝트이름
+npm start
+
+
+npm install package.json 을보고 모듈을 받아옴
+
+run 상황시 ctrl c로 빠져나오기
+
+확장 설치
+ES7+ React/Redux/React-Native snippets
