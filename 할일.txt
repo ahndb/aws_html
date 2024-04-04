@@ -22,8 +22,8 @@ npm install -g ts-node
 리액트 설치
 npx create-react-app 프로젝트이름 --template typescript
 
-cd 프로젝트이름
-npm start
+- cd 프로젝트이름
+- npm (run) start
 
 
 npm install package.json 을보고 모듈을 받아옴
