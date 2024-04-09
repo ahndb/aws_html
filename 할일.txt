@@ -32,3 +32,6 @@ run 상황시 ctrl c로 빠져나오기
 
 확장 설치
 ES7+ React/Redux/React-Native snippets
+
+======================================
+gitlens설치
